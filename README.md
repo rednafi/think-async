@@ -1,5 +1,5 @@
 <div align="center">
-<h1>Thinking Asyncio</h1>
+<h1>Think Asyncio</h1>
 🌿 Contextualizing Python's Asyncio
 </div>
 
