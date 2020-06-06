@@ -12,8 +12,8 @@
 
 ### How To
 
-- [Calling sync from async & vice versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) - Andrew Godwin (Django core dev)
-- [Guide to Concurrency in Python with Asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) [create_task, ensure_future, wait, wait_for, gather]
+- [Calling sync from async & vice versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) >> Fantastic article on the gradual adoption of asyncio
+- [Guide to Concurrency in Python with Asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) >> Asyncio's create_task, ensure_future, wait, wait_for, gather APIs
 
 ## Stack Overflow
 
