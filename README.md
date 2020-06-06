@@ -1,7 +1,7 @@
 <div align="center">
-<h2>Thinking Asyncio</h2>
+<h1>Thinking Asyncio</h1>
 🌿 Contextualizing Python's Asyncio
-</div>2>
+</div>
 
 ## Blogs
 
