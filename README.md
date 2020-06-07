@@ -28,6 +28,11 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 
 ## Curious Mind Wants to Know
+### Concepts
+
+* [Why do we need coroutines in Python?](https://stackoverflow.com/questions/40925797/why-do-we-need-coroutines-in-python)
+
+### Asyncio API
 
 * [Difference between asyncio gather & wait](https://stackoverflow.com/questions/42231161/asyncio-gather-vs-asyncio-wait#:~:text=gather%20mainly%20focuses%20on%20gathering,just%20waits%20on%20the%20futures.)
 
