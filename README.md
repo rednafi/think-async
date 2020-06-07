@@ -5,7 +5,7 @@
 
 ## Description
 
-This repository contains links to some awesome blogs, books, talks and docs to get you up and running with Python's asynchronous paradigm. It tries to avoid resources that are outdated or contain deprecated APIs that make the async subspace of Python seem overly complicated, especially for the beginners. 
+This repository contains links to some awesome blog posts, books, talks and docs to get you up and running with Python's asynchronous paradigm. It tries to avoid resources that are outdated or contain deprecated APIs that make the async subspace of Python seem overly complicated, especially for the beginners. 
 
 ## Blogs
 
