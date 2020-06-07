@@ -18,19 +18,22 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 </div>
 
+<div align="center">
+
 ## Table of Contents
 
+* [Description](#description)
+* [Table of Contents](#table-of-contents)
+* [Blogs](#blogs)
+    * [Prelude](#prelude)
+    * [Transcendence](#transcendence)
+* [Questions](#questions)
+    * [Concepts](#concepts)
+    * [Asyncio API](#asyncio-api)
+* [Books](#books)
+* [Talks](#talks)
 
-+----------------------------------+---------+------------------------+----------------+
-|               Col1               |  Col2   |          Col3          | Numeric Column |
-+----------------------------------+---------+------------------------+----------------+
-| Value 1                          | Value 2 | 123                    |           10.0 |
-| Separate                         | cols    | with a tab or 4 spaces |       -2,027.1 |
-| This is a row with only one cell |         |                        |                |
-+----------------------------------+---------+------------------------+----------------+
-
-
-
+</div>
 
 ## Blogs
 
