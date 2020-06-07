@@ -1,6 +1,10 @@
 <div align="center">
 
-![art](./art.png)
+
+<p align="center">
+        <a href="https://github.com/rednafi/thinking-asyncio"><img src="https://raw.githubusercontent.com/rednafi/thinking-asyncio/master/art.png?token=AHFDBHBQB3XCXWTHV4EYS2C63VTRO" align="center" /></a>
+</p>
+
 
 🔰 Contextualizing Python's Asyncio
 
