@@ -10,10 +10,27 @@
 
 </div>
 
+<div align="center">
 
 ## Description
 
 This repository contains links to some awesome blog posts, books, talks and docs to get you up and running with Python's asynchronous paradigm. It tries to avoid resources that are outdated or contain deprecated APIs that make the async subspace of Python seem overly complicated, especially for the beginners.
+
+</div>
+
+## Table of Contents
+
+
++----------------------------------+---------+------------------------+----------------+
+|               Col1               |  Col2   |          Col3          | Numeric Column |
++----------------------------------+---------+------------------------+----------------+
+| Value 1                          | Value 2 | 123                    |           10.0 |
+| Separate                         | cols    | with a tab or 4 spaces |       -2,027.1 |
+| This is a row with only one cell |         |                        |                |
++----------------------------------+---------+------------------------+----------------+
+
+
+
 
 ## Blogs
 
@@ -35,7 +52,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 * [Calling Sync from Async & Vice Versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) -> Fantastic article on the gradual adoption of asyncio
 
 
-## Curious Mind Wants to Know
+## Questions
 
 ### Concepts
 
@@ -48,5 +65,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 * [Difference among asyncio ensure_future, create_task & simple coroutines](https://stackoverflow.com/questions/36342899/asyncio-ensure-future-vs-baseeventloop-create-task-vs-simple-coroutine#:~:text=ensure_future%20is%20a%20method%20to,implement%20this%20function%20different%20ways.)nc
 
 * [Does asyncio gather guarantees execution & result order?](https://stackoverflow.com/questions/54668701/asyncio-gather-scheduling-order-guarantee#:~:text=Yes%2C%20at%20least%20from%20the,of%20them%20one%20by%20one.)
+
+## Books
 
 ## Talks
