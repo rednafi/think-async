@@ -3,13 +3,19 @@
 🌿 Contextualizing Python's Asyncio
 </div>
 
+## Description
+
+This repository contains links to some awesome blogs, books, talks and docs to get you up and running with Python's asynchronous paradigm. It tries to avoid resources that are outdated or contain deprecated APIs that make the async subspace of Python seem overly complicated, especially for the beginners. 
+
 ## Blogs
 
 ### Philosophy
+
 * [How the heck does async/await work in Python 3.5?](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/) -> Good intro to async but slightly outdated
 
 ### Intro
-* [Concurrency for people in a hurry - FastAPI docs](https://fastapi.tiangolo.com/async/) -> Simple high-level overview of concurrency in general
+
+* [Concurrency for people in a hurry - FastAPI doc](https://fastapi.tiangolo.com/async/) -> Simple high-level overview of concurrency in general
 
 ### How To
 
