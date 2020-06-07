@@ -18,7 +18,6 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 </div>
 
-<div align="center">
 
 ## Table of Contents
 
@@ -33,7 +32,6 @@ This repository contains links to some awesome blog posts, books, talks and docs
 * [Books](#books)
 * [Talks](#talks)
 
-</div>
 
 ## Blogs
 
