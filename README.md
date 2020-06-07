@@ -9,6 +9,7 @@
 * [How the heck does async/await work in Python 3.5?](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/) -> Good intro to async but slightly outdated
 
 ### Intro
+* [Concurrency for people in a hurry - FastAPI docs](https://fastapi.tiangolo.com/async/) -> Simple high-level overview of concurrency in general
 
 ### How To
 
