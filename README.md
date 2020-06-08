@@ -23,10 +23,11 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 * [Blogs](#blogs)
     * [Prelude](#prelude)
-    * [Transcendence](#transcendence)
+    * [Overview](#overview)
+    * [API](#api)
 * [Questions](#questions)
     * [Concepts](#concepts)
-    * [Asyncio API](#asyncio-api)
+    * [API](#api-1)
 * [Books](#books)
 * [Talks](#talks)
 
@@ -74,3 +75,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 ## Books
 
 ## Talks
+
+## Contributors
+
+[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/0)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/0)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/1)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/1)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/2)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/2)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/3)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/3)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/4)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/4)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/5)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/5)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/6)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/6)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/7)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/7)
