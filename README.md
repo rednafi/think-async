@@ -10,6 +10,8 @@
 
 </div>
 
+---
+
 <div align="center">
 
 ## Description
@@ -18,6 +20,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 </div>
 
+---
 
 ## Table of Contents
 
@@ -30,6 +33,8 @@ This repository contains links to some awesome blog posts, books, talks and docs
     * [API](#api-1)
 * [Books](#books)
 * [Talks](#talks)
+
+---
 
 ## Blogs
 
