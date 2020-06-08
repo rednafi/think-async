@@ -56,7 +56,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 * [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs
 
-* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between *gather*, *wait*,*wait_for*, *create_task*, *as_completed* etc
+* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between *gather*, *wait*, *wait_for*, *create_task*, *as_completed* etc
 
 
 ## Questions
