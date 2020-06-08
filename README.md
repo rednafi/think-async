@@ -82,6 +82,8 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ## Books
 
+* [Using Asyncio in Python - Caleb Hattingh](https://www.goodreads.com/book/show/50083143-using-asyncio-in-python?ac=1&from_search=true&qid=Ozrygzthcs&rank=3)
+
 ## Talks
 
 ## Contributors
