@@ -56,14 +56,17 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ### API
 
-
 * [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs
 
 * [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between *gather*, *wait*, *wait_for*, *create_task*, *as_completed* etc
 
+* [Latency in Asynchronous Python](https://nullprogram.com/blog/2020/05/24/) -> Using *asyncio.Queue(maxsize=1)* to run blocking code
+
+
 ## Examples
 
 * [Asyncio by examples](https://www.pythonsheets.com/notes/python-asyncio.html#) -> A dense example driven overview of the asyncio APIs
+
 
 ## Questions
 
@@ -80,11 +83,14 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 * [Does asyncio gather guarantees execution & result order?](https://stackoverflow.com/questions/54668701/asyncio-gather-scheduling-order-guarantee#:~:text=Yes%2C%20at%20least%20from%20the,of%20them%20one%20by%20one.)
 
+
 ## Books
 
 * [Using Asyncio in Python - Caleb Hattingh](https://www.goodreads.com/book/show/50083143-using-asyncio-in-python?ac=1&from_search=true&qid=Ozrygzthcs&rank=3)
 
+
 ## Talks
+
 
 ## Contributors
 
