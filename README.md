@@ -46,8 +46,6 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 * [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/) -> Start grasping the bare-minimum concepts from here
 
-* [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs
-
 * [Asyncio for the Working Python Developer](https://yeray.dev/python/asyncio/asyncio-for-the-working-python-developer) -> Getting your hands dirty with the async features
 
 * [Calling Sync from Async & Vice Versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) -> Fantastic article on the gradual adoption of asyncio
@@ -55,7 +53,10 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ### API
 
-* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/)
+
+* [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs
+
+* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between of *gather*, *wait*,*wait_for*, *create_task*, *as_completed* etc
 
 
 ## Questions
