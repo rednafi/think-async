@@ -21,8 +21,6 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ## Table of Contents
 
-* [Description](#description)
-* [Table of Contents](#table-of-contents)
 * [Blogs](#blogs)
     * [Prelude](#prelude)
     * [Transcendence](#transcendence)
@@ -31,7 +29,6 @@ This repository contains links to some awesome blog posts, books, talks and docs
     * [Asyncio API](#asyncio-api)
 * [Books](#books)
 * [Talks](#talks)
-
 
 ## Blogs
 
