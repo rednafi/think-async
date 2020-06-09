@@ -20,20 +20,13 @@ This repository contains links to some awesome blog posts, books, talks and docs
 </div>
 
 ---
+<div align="center">
 
-## Table of Contents
+<h2>Table of Contents</h2>
 
-* [Blogs](#blogs)
-    * [Prelude](#prelude)
-    * [Overview](#overview)
-    * [API](#api)
-* [Examples](#examples)
-* [Salvation](#salvation)
-    * [Concepts](#concepts)
-    * [API](#api-1)
-* [Books](#books)
-* [Talks](#talks)
-* [Contributors](#contributors)
+| [Blogs](#blogs) | [Examples](#examples) | [Salvation](#salvation) | [Books](#books) | [Talks](#talks) |
+
+</div>
 
 ---
 
