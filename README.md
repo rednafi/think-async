@@ -23,7 +23,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ## Table of Contents
 
-* [Blogs](#blogs)
+* [Blogs & Slides](#blogs)
     * [Prelude](#prelude)
     * [Overview](#overview)
     * [API](#api)
@@ -36,7 +36,10 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ---
 
-## Blogs
+## Blogs & Slides
+
+### Concepts
+* [Generators & Coroutines - David Beazly](http://www.dabeaz.com/coroutines/Coroutines.pdf) -> This is outdated and uses python 2x but the underlying concept is still relevant
 
 ### Prelude
 
