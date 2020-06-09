@@ -23,23 +23,21 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 ## Table of Contents
 
-* [Blogs & Slides](#blogs)
+* [Blogs](#blogs)
     * [Prelude](#prelude)
     * [Overview](#overview)
     * [API](#api)
 * [Examples](#examples)
-* [Questions](#questions)
+* [Salvation](#salvation)
     * [Concepts](#concepts)
     * [API](#api-1)
 * [Books](#books)
 * [Talks](#talks)
+* [Contributors](#contributors)
 
 ---
 
-## Blogs & Slides
-
-### Concepts
-* [Generators & Coroutines - David Beazly](http://www.dabeaz.com/coroutines/Coroutines.pdf) -> This is outdated and uses python 2x but the underlying concept is still relevant
+## Blogs
 
 ### Prelude
 
@@ -71,12 +69,13 @@ This repository contains links to some awesome blog posts, books, talks and docs
 * [Asyncio by examples](https://www.pythonsheets.com/notes/python-asyncio.html#) -> A dense example driven overview of the asyncio APIs
 
 
-## Questions
+## Salvation
 
 ### Concepts
 
 * [Why do we need coroutines in Python?](https://stackoverflow.com/questions/40925797/why-do-we-need-coroutines-in-python)
 
+* [Generators & Coroutines - David Beazly](http://www.dabeaz.com/coroutines/Coroutines.pdf) -> This is outdated and uses python 2x but the underlying concept is still relevant
 
 ### API
 
