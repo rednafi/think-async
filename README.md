@@ -102,6 +102,7 @@ This repository contains links to some awesome blog posts, books, talks and docs
 
 </div>
 
+* [import asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's complete `asyncio` from basics to app.
 ---
 
 ## Contributors
