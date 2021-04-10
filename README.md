@@ -1,7 +1,7 @@
 <div align="center">
 
 ![async](https://user-images.githubusercontent.com/30027932/114286121-d4fef400-9a7d-11eb-9e1c-34904ac79aa3.png)
-)
+
 
 🔰 Contextualizing Python's Async Paradigm
 
@@ -28,7 +28,6 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Books](#books)
 * [Talks](#talks)
 * [Banters](#banters)
-* [Contributors](#contributors)
 
 ## Concepts & Philosophy
 
@@ -88,7 +87,3 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate Asyncio's Twisted inspired design philosophy in general
 
 * [The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of Asyncio in a single Hackernews comment
-
-## Contributors
-
-[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/0)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/0)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/1)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/1)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/2)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/2)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/3)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/3)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/4)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/4)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/5)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/5)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/6)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/6)[![](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/images/7)](https://sourcerer.io/fame/rednafi/rednafi/thinking-asyncio/links/7)
