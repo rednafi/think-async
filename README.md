@@ -74,16 +74,19 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Talks
 
-* [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's Asyncio videos—from basics to application
-* [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own Asyncio-like library.
+* [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
+
+* [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
+
+* Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018[https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s] -> Superpowered asyncio with multiprocessing
 
 
 ## Banters
 
-* [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the Asyncio module
+* [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the asyncio module
 
 * [People Complaining about the Design of the Asyncio APIs](https://news.ycombinator.com/item?id=12829759) -> Armin Ronacher's "I Don't Understand Asyncio" brewed this Hackernews storm
 
-* [People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate Asyncio's Twisted inspired design philosophy in general
+* [People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
 
-* [The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of Asyncio in a single Hackernews comment
+* [The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
