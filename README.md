@@ -78,7 +78,10 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
-* Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018[https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s] -> Superpowered asyncio with multiprocessing
+* [Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
+
+* [Nathaniel J. Smith - Trio: Async concurrency for mere mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
+
 
 
 ## Banters
