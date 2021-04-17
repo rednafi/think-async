@@ -27,6 +27,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Examples](#examples)
 * [Books](#books)
 * [Talks](#talks)
+* [Podcasts](#podcasts)
 * [Banters](#banters)
 
 ## Concepts & Philosophy
@@ -87,6 +88,9 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
 
 * [Nathaniel J. Smith - Trio: Async concurrency for mere mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
+
+
+* [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazly builds a thread and async compatible queue from scratch
 
 ## Podcasts
 
