@@ -88,6 +88,9 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Nathaniel J. Smith - Trio: Async concurrency for mere mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
 
+## Podcasts
+
+* [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python
 
 
 ## Banters
