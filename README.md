@@ -75,6 +75,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Talks
 
+* [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O
+
 * [David Beazly - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles
 
 * [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
