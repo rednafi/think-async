@@ -19,7 +19,7 @@ async def send_message(
     region_name: str,
 ) -> None:
 
-    # Boto should get credentials from ~/.aws/credentials or the environment
+    # Boto should get credentials from ~/.aws/credentials or the environment.
     session = aiobotocore.get_session()
     async with session.create_client(service_name, region_name=region_name) as client:
         try:
@@ -54,7 +54,7 @@ async def send_message(
 
 
 async def receive_message(queue_name: str, service_name: str, region_name: str):
-    # Boto should get credentials from ~/.aws/credentials or the environment
+    # Boto should get credentials from ~/.aws/credentials or the environment.
     session = aiobotocore.get_session()
     async with session.create_client(service_name, region_name=region_name) as client:
         try:

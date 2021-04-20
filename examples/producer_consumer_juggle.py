@@ -47,10 +47,10 @@ async def main() -> None:
     consumer_tasks = [consumer(queue, event) for _ in range(3)]
     await asyncio.gather(*consumer_tasks, return_exceptions=True)
 
-    # This implicitly run the producer
+    # This implicitly run the producer.
     await queue.join()
 
-    # Cancel tasks
+    # Cancel tasks.
     for task in consumer_tasks:
         task.cancel()
 
