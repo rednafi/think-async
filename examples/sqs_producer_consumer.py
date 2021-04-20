@@ -78,7 +78,7 @@ async def receive_message(queue_name: str, service_name: str, region_name: str):
             # essentially a sleep in the receive_message call.
             response = await client.receive_message(
                 QueueUrl=queue_url,
-                WaitTimeSeconds=5,
+                WaitTimeSeconds=20,
             )
 
             if "Messages" in response:
