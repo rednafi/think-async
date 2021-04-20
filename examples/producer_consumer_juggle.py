@@ -15,6 +15,7 @@ producer run again. This juggling between producer and consumer goes on indefini
 """
 
 from __future__ import annotations
+
 import asyncio
 import itertools
 

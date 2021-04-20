@@ -11,9 +11,10 @@ To run the script, install httpx with `pip install httpx`. Then run-
 """
 
 from __future__ import annotations
-import asyncio
-import httpx
 
+import asyncio
+
+import httpx
 
 MAX_CONSUMERS = 30
 
