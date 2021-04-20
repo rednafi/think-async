@@ -5,10 +5,10 @@ import asyncio
 async def echo(term: str, limit: asyncio.Semaphore):
     async with limit:
         print(term)
-        await asyncio.sleep(0)
+        await asyncio.sleep(0.1)
         if limit.locked():
-            print(f"\nlimit crossed, sleeping for {2} seconds\n")
-        await asyncio.sleep(2)
+            print(f"limit crossed, sleeping for {2} seconds")
+            await asyncio.sleep(2)
 
 
 async def main():
