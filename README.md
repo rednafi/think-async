@@ -103,6 +103,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the asyncio module
 
+* [I'm Not Feeling the Async Pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/) -> Armin Ronacher points out how Asyncio API overlooks the complexities imposed by backpressure
+
 * [People Complaining about the Design of the Asyncio APIs](https://news.ycombinator.com/item?id=12829759) -> Armin Ronacher's "I Don't Understand Asyncio" brewed this Hackernews storm
 
 * [People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
