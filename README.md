@@ -103,10 +103,12 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the asyncio module
 
+* [Hackernews Discourse - I Don't Understand Asyncio](https://news.ycombinator.com/item?id=12829759) -> People Complaining About the Design Decisions behind the Asyncio API
+
 * [I'm Not Feeling the Async Pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/) -> Armin Ronacher points out how Asyncio API overlooks the complexities imposed by backpressure
 
-* [People Complaining about the Design of the Asyncio APIs](https://news.ycombinator.com/item?id=12829759) -> Armin Ronacher's "I Don't Understand Asyncio" brewed this Hackernews storm
+* [Hackernews Discourse - I'm Not Feeling the Async Pressure](https://news.ycombinator.com/item?id=21927427) -> Discussion on whether language implementation should deal with backpressure or not
 
-* [People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
+* [Hackernews Discourse - People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
 
-* [The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
+* [Hackernews Discourse - The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
