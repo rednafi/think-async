@@ -39,6 +39,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Concurrency for People in a Hurry - FastAPI doc](https://fastapi.tiangolo.com/async/) -> Simple high-level overview of concurrency in general
 * [How the Heck Does Async/Await Work in Python 3.5?](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/) -> Good intro to async but slightly outdated
 
+* [Unyielding - Why Threads Are Bad?](https://glyph.twistedmatrix.com/2014/02/unyielding.html) -> Glyph, the creator of the Twisted projects argues why writing multi-threaded code correctly is hard
 
 ## Asyncio Overview
 
