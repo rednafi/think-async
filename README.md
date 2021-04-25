@@ -84,13 +84,15 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Yury Selivanov - async/await in Python 3.5 and why it is awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
 
-* [Yury Selivanov - asyncio: what's next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walk through of asyncio APIs and speculations on future improvements
+* [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walk through of asyncio APIs and speculations on future improvements
 
 * [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
 * [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
 
-* [Nathaniel J. Smith - Trio: Async concurrency for mere mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
+* [Nathaniel J. Smith - Trio: Async Concurrency for Mere Mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
+
+* [Kavya Joshi - A Tale of Concurrency Through Creativity in Python: A Deep Dive Into How Gevent Works](https://www.youtube.com/watch?v=GunMToxbE0E) -> Implicit cooperative multitasking via Gevent
 
 
 * [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazly builds a thread and async compatible queue from scratch
