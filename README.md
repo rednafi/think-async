@@ -108,6 +108,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Hackernews Discourse - I Don't Understand Asyncio](https://news.ycombinator.com/item?id=12829759) -> People Complaining About the Design Decisions behind the Asyncio API
 
+* [Reddit Discourse - I Don't Understand Asyncio](https://www.reddit.com/r/Python/comments/5a6gmv/i_dont_understand_pythons_asyncio_armin_ronachers/) -> Armin Ronacher's conversation with a Python core developer
+
 * [I'm Not Feeling the Async Pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/) -> Armin Ronacher points out how Asyncio API overlooks the complexities imposed by backpressure
 
 * [Hackernews Discourse - I'm Not Feeling the Async Pressure](https://news.ycombinator.com/item?id=21927427) -> Discussion on whether language implementation should deal with backpressure or not
