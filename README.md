@@ -76,6 +76,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Talks
 
+* [Raymond Hettinger - Keynote on Concurrency - PyBay 2017] -> Raymond Rettinger mostly talking about threads, queues, and processes
+
 * [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O
 
 * [David Beazly - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles
