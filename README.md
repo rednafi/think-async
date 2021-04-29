@@ -74,6 +74,12 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Using Asyncio in Python - Caleb Hattingh](https://www.goodreads.com/book/show/50083143-using-asyncio-in-python?ac=1&from_search=true&qid=Ozrygzthcs&rank=3)
 
+
+## Tutorials
+
+* [Python Threading Tutorial: Run Code Concurrently Using the Threading Module]() -> Corey Schafer explains how to use the built-in theading module in Python to achieve concurrency
+
+
 ## Talks
 
 * [Raymond Hettinger - Keynote on Concurrency - PyBay 2017] -> Raymond Rettinger mostly talking about threads, queues, and processes
