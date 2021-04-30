@@ -77,12 +77,12 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Tutorials
 
-* [Python Threading Tutorial: Run Code Concurrently Using the Threading Module]() -> Corey Schafer explains how to use the built-in theading module in Python to achieve concurrency
+* [Python Threading Tutorial: Run Code Concurrently Using the Threading Module](https://www.youtube.com/watch?v=IEEhzQoKtQU) -> Corey Schafer explains how to use the built-in theading module in Python to achieve concurrency
 
 
 ## Talks
 
-* [Raymond Hettinger - Keynote on Concurrency - PyBay 2017] -> Raymond Rettinger mostly talking about threads, queues, and processes
+* [Raymond Hettinger - Keynote on Concurrency - PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk) -> Raymond Rettinger mostly talking about threads, queues, and processes
 
 * [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O
 
