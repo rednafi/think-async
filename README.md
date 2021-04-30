@@ -3,7 +3,7 @@
 ![async](https://user-images.githubusercontent.com/30027932/114286121-d4fef400-9a7d-11eb-9e1c-34904ac79aa3.png)
 
 
-🔰 Contextualizing Python's Async Paradigm
+🌿 Exploring Different Concurrency Paradigms in Python
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 [![License](https://img.shields.io/cocoapods/l/AFNetworking?style=flat-square)](https://github.com/rednafi/think-asyncio/blob/master/LICENSE)
@@ -108,6 +108,10 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 ## Podcasts
 
 * [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python
+
+* [David Beazly - Python Concurrency with Curio](https://talkpython.fm/episodes/show/107/python-concurrency-with-curio) -> David Beazly explains the problems with Asyncio and how he built Curio by reasoning from the first principle
+
+* [Nathaniel Smith - Simplifying Python's Async with Trio](https://talkpython.fm/episodes/show/167/simplifying-pythons-async-with-trio) -> Nathaniel Smith talks about why cancellation and exception handling can be difficult in background tasks, and how Trio attempts to solve that
 
 
 ## Banters
