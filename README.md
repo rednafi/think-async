@@ -77,8 +77,9 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Tutorials
 
-* [Python Threading Tutorial: Run Code Concurrently Using the Threading Module](https://www.youtube.com/watch?v=IEEhzQoKtQU) -> Corey Schafer explains how to use the built-in theading module in Python to achieve concurrency
+* [Python Threading Tutorial: Run Code Concurrently Using the Threading Module](https://www.youtube.com/watch?v=IEEhzQoKtQU) -> Corey Schafer explains how to use the built-in threading module in Python to achieve concurrency
 
+* [Python Multiprocessing Tutorial: Run Code Parallelly Using the Multiprocessing Module](https://www.youtube.com/watch?v=fKl2JW_qrso&t=36s) -> Corey Schafer explains how to use the built-in multiprocessing module in Python to achieve parallelism
 
 ## Talks
 
@@ -86,13 +87,13 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O
 
-* [David Beazly - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles
+* [David Beazley - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles
 
 * [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
 
 * [Yury Selivanov - async/await in Python 3.5 and why it is awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
 
-* [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walk through of asyncio APIs and speculations on future improvements
+* [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements
 
 * [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
@@ -103,13 +104,13 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Kavya Joshi - A Tale of Concurrency Through Creativity in Python: A Deep Dive Into How Gevent Works](https://www.youtube.com/watch?v=GunMToxbE0E) -> Implicit cooperative multitasking via Gevent
 
 
-* [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazly builds a thread and async compatible queue from scratch
+* [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazley builds a thread and async compatible queue from scratch
 
 ## Podcasts
 
 * [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python
 
-* [David Beazly - Python Concurrency with Curio](https://talkpython.fm/episodes/show/107/python-concurrency-with-curio) -> David Beazly explains the problems with Asyncio and how he built Curio by reasoning from the first principle
+* [David Beazley - Python Concurrency with Curio](https://talkpython.fm/episodes/show/107/python-concurrency-with-curio) -> David Beazley explains the problems with Asyncio and how he built Curio by reasoning from the first principle
 
 * [Nathaniel Smith - Simplifying Python's Async with Trio](https://talkpython.fm/episodes/show/167/simplifying-pythons-async-with-trio) -> Nathaniel Smith talks about why cancellation and exception handling can be difficult in background tasks, and how Trio attempts to solve that
 
