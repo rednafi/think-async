@@ -103,6 +103,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Kavya Joshi - A Tale of Concurrency Through Creativity in Python: A Deep Dive Into How Gevent Works](https://www.youtube.com/watch?v=GunMToxbE0E) -> Implicit cooperative multitasking via Gevent
 
+* [Understanding the Python GIL](https://www.youtube.com/watch?v=Obt-vMVdM8s&t=33s) -> David Beazly explains the behavior of threads in Python why it yields concurrency rather than parallelism
+
 
 * [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazley builds a thread and async compatible queue from scratch
 
