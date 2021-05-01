@@ -1,4 +1,4 @@
-from twisted.internet import reactor, defer
+from twisted.internet import defer, reactor
 
 
 def get_dummy_data(input_data):
