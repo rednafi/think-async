@@ -41,7 +41,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Unyielding - Why Threads Are Bad?](https://glyph.twistedmatrix.com/2014/02/unyielding.html) -> Glyph, the creator of the Twisted projects argues why writing multi-threaded code correctly is hard
 
-* [Some Thoughts on Asynchronous API Design in a Post-Async/Await World](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/) -> Conundrums of crafting causality-compliant, coroutine-chauffeured concurrency-contraptions—catering callback compliance
+* [Nathanial Smith - Some Thoughts on Asynchronous API Design in a Post-Async/Await World](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/) -> Conundrums of crafting causality-compliant, coroutine-chauffeured concurrency-contraptions—catering callback compliance
 
 ## Asyncio Overview
 
