@@ -32,7 +32,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Concepts & Philosophy
 
-* [Why do we need coroutines in Python?](https://stackoverflow.com/questions/40925797/why-do-we-need-coroutines-in-python)
+* [Why Do We Need Coroutines in Python?](https://stackoverflow.com/questions/40925797/why-do-we-need-coroutines-in-python)
 * [Generators & Coroutines - David Beazly](http://www.dabeaz.com/coroutines/Coroutines.pdf) -> This is outdated and uses python 2x but the underlying concept is still relevant
 
 
@@ -40,6 +40,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [How the Heck Does Async/Await Work in Python 3.5?](https://snarky.ca/how-the-heck-does-async-await-work-in-python-3-5/) -> Good intro to async but slightly outdated
 
 * [Unyielding - Why Threads Are Bad?](https://glyph.twistedmatrix.com/2014/02/unyielding.html) -> Glyph, the creator of the Twisted projects argues why writing multi-threaded code correctly is hard
+
+* [Some Thoughts on Asynchronous API Design in a Post-Async/Await World](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/) -> Conundrums of crafting causality-compliant, coroutine-chauffeured concurrency-contraptions—catering callback compliance
 
 ## Asyncio Overview
 
@@ -58,14 +60,14 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Difference Between Asyncio gather & wait](https://stackoverflow.com/questions/42231161/asyncio-gather-vs-asyncio-wait#:~:text=gather%20mainly%20focuses%20on%20gathering,just%20waits%20on%20the%20futures.)
 
-* [Differences Among Asyncio ensure_future, create_task & simple coroutines](https://stackoverflow.com/questions/36342899/asyncio-ensure-future-vs-baseeventloop-create-task-vs-simple-coroutine#:~:text=ensure_future%20is%20a%20method%20to,implement%20this%20function%20different%20ways.)
+* [Differences Among Asyncio ensure_future, create_task & Simple Coroutines](https://stackoverflow.com/questions/36342899/asyncio-ensure-future-vs-baseeventloop-create-task-vs-simple-coroutine#:~:text=ensure_future%20is%20a%20method%20to,implement%20this%20function%20different%20ways.)
 
-* [Does Asyncio gather guarantees execution & result order?](https://stackoverflow.com/questions/54668701/asyncio-gather-scheduling-order-guarantee#:~:text=Yes%2C%20at%20least%20from%20the,of%20them%20one%20by%20one.)
+* [Does Asyncio gather Guarantees Execution & Result Order?](https://stackoverflow.com/questions/54668701/asyncio-gather-scheduling-order-guarantee#:~:text=Yes%2C%20at%20least%20from%20the,of%20them%20one%20by%20one.)
 
 
 ## Examples
 
-* [Asyncio by examples](https://www.pythonsheets.com/notes/python-asyncio.html#) -> A dense example-driven overview of the Asyncio APIs
+* [Asyncio by Examples](https://www.pythonsheets.com/notes/python-asyncio.html#) -> A dense example-driven overview of the Asyncio APIs
 
 * [Simple IPv4 TCP Scanner Leveraging Asyncio](https://github.com/rednafi/tcp-port-scanner) -> A complete example of using asynchronous producer-consumer pattern to create a simple TCP scanner
 
@@ -91,11 +93,11 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
 
-* [Yury Selivanov - async/await in Python 3.5 and why it is awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
+* [Yury Selivanov - Async/Await in Python 3.5 and Why It Is Awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
 
 * [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements
 
-* [Build your own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
+* [Build Your Own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
 * [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
 
