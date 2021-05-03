@@ -7,7 +7,8 @@ from typing import Any, Optional, Type
 
 
 def ephemera(
-    timeout: Optional[float] = None, timeout_at: Optional[float] = None
+    timeout: Optional[float] = None,
+    timeout_at: Optional[float] = None,
 ) -> Timeout:
     if all((timeout, timeout_at)):
         raise TypeError("passing both 'timeout' and 'timeout_at' is not allowed")
