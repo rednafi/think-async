@@ -41,9 +41,11 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Unyielding - Why Threads Are Bad?](https://glyph.twistedmatrix.com/2014/02/unyielding.html) -> Glyph, the creator of the Twisted projects argues why writing multi-threaded code correctly is hard
 
-* [Nathanial Smith - Timeouts and Cancellation for Humans](https://vorpus.org/blog/timeouts-and-cancellation-for-humans/) -> Nathanial Smith ponders on the ways timeout and cancellation can be handled across different concurrency primitives
+* [Nathaniel Smith - Notes on structured concurrency, or: Go statement considered harmful ](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/) -> Nataniel Smith argues that Dijkstra's strurctured programming philosophy can show us the correct way of doing concurrent I/O programming
 
-* [Nathanial Smith - Some Thoughts on Asynchronous API Design in a Post-Async/Await World](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/) -> Conundrums of crafting causality-compliant, coroutine-chauffeured concurrency-contraptions—catering callback compliance
+* [Nathaniel Smith - Timeouts and Cancellation for Humans](https://vorpus.org/blog/timeouts-and-cancellation-for-humans/) -> Nathaniel Smith ponders on the ways timeout and cancellation can be handled across different concurrency primitives
+
+* [Nathaniel Smith - Some Thoughts on Asynchronous API Design in a Post-Async/Await World](https://vorpus.org/blog/some-thoughts-on-asynchronous-api-design-in-a-post-asyncawait-world/) -> Conundrums of crafting causality-compliant, coroutine-chauffeured concurrency-contraptions—catering callback compliance
 
 ## Asyncio Overview
 
