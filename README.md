@@ -32,6 +32,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Concepts & Philosophy
 
+* [Sync vs. Async Python: What is the Difference?](https://blog.miguelgrinberg.com/post/sync-vs-async-python-what-is-the-difference) -> Differences between sync and async Python, and when async is the right tool to solve your concurrency problems
+
 * [Why Do We Need Coroutines in Python?](https://stackoverflow.com/questions/40925797/why-do-we-need-coroutines-in-python)
 * [Generators & Coroutines - David Beazly](http://www.dabeaz.com/coroutines/Coroutines.pdf) -> This is outdated and uses python 2x but the underlying concept is still relevant
 
