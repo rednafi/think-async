@@ -140,3 +140,12 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Hackernews Discourse - People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
 
 * [Hackernews Discourse - The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
+
+
+## Python Enhancement Proposals (PEPs)
+
+* [PEP 255 -- Simple Generators](https://www.python.org/dev/peps/pep-0255/)
+* [PEP 342 -- Coroutines via Enhanced Generators](https://www.python.org/dev/peps/pep-0342/)
+* [PEP 380 -- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
+* [PEP 3156 -- Asynchronous IO Support Rebooted: the "asyncio" Module](https://www.python.org/dev/peps/pep-3156/)
+* [PEP 492 -- Coroutines with async and await syntax](https://www.python.org/dev/peps/pep-0492/)
