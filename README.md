@@ -103,6 +103,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements
 
+* [Yury Selivanov - Asyncio in Python 3.7 and 3.8 || A Guide to Asynchronous Programming in Python with Asyncio](https://www.youtube.com/watch?v=5ZUXg5uzrGU&t=4s) -> Asyncio's past, present and future
+
 * [Build Your Own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
 * [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
