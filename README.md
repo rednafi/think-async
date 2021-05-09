@@ -118,6 +118,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazley builds a thread and async compatible queue from scratch
 
+* [Łukasz Langa – Thinking in Coroutines](https://www.youtube.com/watch?v=cvwrkOnn9xo) -> Understanding event loop, task cancellation, and exception handling in Asyncio
+
 ## Podcasts
 
 * [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python
@@ -126,6 +128,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Nathaniel Smith - Simplifying Python's Async with Trio](https://talkpython.fm/episodes/show/167/simplifying-pythons-async-with-trio) -> Nathaniel Smith talks about why cancellation and exception handling can be difficult in background tasks, and how Trio attempts to solve that
 
+* [Lukasz Langa - AsyncIO + Music, Origins of Black, and Managing Python Releases](https://realpython.com/podcasts/rpp/7/) -> Lukasz Langa talks about analog synthesizers, AsyncIO and the Black code formatter
 
 ## Banters
 
