@@ -99,6 +99,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
 
+* [Yury Selivanov - High Performance Networking in Python](https://www.youtube.com/watch?v=pi49aiLBas8) -> The talk covers the async/await syntax in Python, asyncio library and ecosystem around it, and ways to use them for creating high performance servers.
+
 * [Yury Selivanov - Async/Await in Python 3.5 and Why It Is Awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
 
 * [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements
