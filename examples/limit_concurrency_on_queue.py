@@ -16,7 +16,8 @@ async def producer(func_ids: Iterable[int], queue: asyncio.Queue[int]) -> None:
     for func_id in func_ids:
         await queue.put(func_id)
         if queue.full():
-            await asyncio.sleep(0)
+            print("\nQueue is full, letting the consumer run...\n")
+            await asyncio.sleep(1)
 
 
 async def consumer(queue: asyncio.Queue[int]) -> None:
@@ -24,19 +25,30 @@ async def consumer(queue: asyncio.Queue[int]) -> None:
         func_id = await queue.get()
         await foo(func_id)
         queue.task_done()
-        await asyncio.sleep(0)
+    await asyncio.sleep(1)
 
 
 async def main() -> None:
-
+    limit = CONCURRENT_TASK_COUNT.get()
     func_ids = range(0, 20)
-    queue = asyncio.Queue(maxsize=CONCURRENT_TASK_COUNT.get())  # type: asyncio.Queue
+    queue = asyncio.Queue(maxsize=limit)  # type: asyncio.Queue
 
-    tasks = [producer(func_ids, queue)]
-    for _ in range(CONCURRENT_TASK_COUNT.get()):
-        tasks.append(consumer(queue))
+    tasks = []
+    producer_task = asyncio.create_task(producer(func_ids, queue))
+    consumer_tasks = [asyncio.create_task(consumer(queue)) for _ in range(limit)]
+    tasks.append(producer_task)
+    tasks.extend(consumer_tasks)
 
-    await asyncio.gather(*tasks)
+    done, pending = await asyncio.wait(tasks, return_when=asyncio.FIRST_EXCEPTION)
+
+    for fut in done | pending:
+        try:
+            if exc := fut.exception():
+                raise exc
+        except asyncio.exceptions.InvalidStateError:
+            pass
+        fut.cancel()
+
     await queue.join()
 
 

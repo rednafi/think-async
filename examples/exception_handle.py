@@ -33,7 +33,10 @@ async def orchestrator() -> None:
 
     producers.extend(consumers)
 
-    done, pending = await asyncio.wait(producers)
+    done, pending = await asyncio.wait(
+        producers,
+        return_when=asyncio.FIRST_EXCEPTION,
+    )
     for fut in done:
         try:
             if exc := fut.exception():
