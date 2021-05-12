@@ -3,7 +3,7 @@ from __future__ import annotations
 import asyncio
 import enum
 from types import TracebackType
-from typing import Any, Optional, Type
+from typing import Optional, Type
 
 
 def ephemera(
