@@ -40,11 +40,11 @@ async def consumer(queue: asyncio.Queue, event: asyncio.Event) -> None:
 
 
 async def main() -> None:
-    queue = asyncio.Queue()
-    event = asyncio.Event()
+    queue = asyncio.Queue()  # type: asyncio.Queue[int]
+    event = asyncio.Event()  # type: asyncio.Event
 
     _ = asyncio.create_task(producer(queue, event))
-    consumer_tasks = [consumer(queue, event) for _ in range(3)]
+    consumer_tasks = [asyncio.create_task(consumer(queue, event)) for _ in range(3)]
     await asyncio.gather(*consumer_tasks, return_exceptions=True)
 
     # This implicitly run the producer.

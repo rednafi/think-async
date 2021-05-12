@@ -26,7 +26,7 @@ async def consumer(q_args: asyncio.Queue) -> None:
 
 
 async def orchestrator() -> None:
-    q_args = asyncio.Queue()
+    q_args = asyncio.Queue()  # type: asyncio.Queue[int]
 
     producers = [asyncio.create_task(producer(q_args))]
     consumers = [asyncio.create_task(consumer(q_args)) for _ in range(5)]
