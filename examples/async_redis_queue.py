@@ -96,7 +96,6 @@ class SimpleTask:
 
     async def process_task(self) -> Coroutine[None, None, Any]:
         """Execute the function."""
-
         return await self.func(*self.args, **self.kwargs)
 
 
@@ -164,7 +163,7 @@ async def foo(start: int, end: int) -> int:
 
 
 async def main():
-    # Instantiate Redis `broker` and `result_backend` connections.
+    # Instantiate Redis `broker` and `result_backend` connection pools.
     broker = aioredis.from_url("redis://localhost:6379/0")
     result_backend = aioredis.from_url("redis://localhost:6379/1")
 
@@ -179,6 +178,7 @@ async def main():
                 print("enqueing task")
                 await queue.enqueue(func, *arg)
 
+            # Dequeue and execute tasks.
             await worker(queue)
 
 
