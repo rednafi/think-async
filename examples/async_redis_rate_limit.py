@@ -11,10 +11,6 @@ class TooManyRequests(Exception):
     pass
 
 
-class RedisConnectionError(Exception):
-    pass
-
-
 def redis_pool() -> Redis:
     connection_pool = aioredis.ConnectionPool(max_connections=100)
     REDIS_POOL = aioredis.Redis(
