@@ -146,13 +146,13 @@ async def worker(queue: Queue) -> None:
     """Mimicks the celery worker."""
 
     async def _execute_task(queue: Queue) -> None:
-        if await queue.get_length() > 0:
+        if await queue.get_length() > 0:  # type: ignore
             await queue.dequeue()
         else:
             logging.info("No tasks in the queue")
             await asyncio.sleep(0)
 
-    for _ in range(await queue.get_length()):
+    for _ in range(await queue.get_length()):  # type: ignore
         await _execute_task(queue)
 
 
