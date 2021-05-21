@@ -1,0 +1,4 @@
+aioredis==2.0.0a1
+aiobotocore==1.3.0
+rich==10.2.2
+uvloop==0.15.2
