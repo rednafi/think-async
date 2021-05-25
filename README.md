@@ -29,6 +29,8 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [Talks](#talks)
 * [Podcasts](#podcasts)
 * [Banters](#banters)
+* [Reactive Programming & Microservices](#reactive-programming-&-microservices)
+
 
 ## Concepts & Philosophy
 
@@ -148,7 +150,7 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 * [Hackernews Discourse - The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
 
-## Reactive Programming and Microservices
+## Reactive Programming & Microservices
 
 * [Redis Streams Featuring Salvatore Sanfilippo - Redis Labs](https://www.youtube.com/watch?v=qXEyuUxQXZM) -> Introduction to the Redis streams data structure and how can it be used as a safer alternative to Pub-Sub
 
