@@ -13,7 +13,7 @@ async def echo(term: str, limit: asyncio.Semaphore) -> None:
 
 
 async def main() -> None:
-    limit = asyncio.Semaphore(3)      # type: asyncio.Semaphore
+    limit = asyncio.Semaphore(3)  # type: asyncio.Semaphore
     consumers = [echo("Semaphore is awesome!", limit) for _ in range(9)]
     await asyncio.gather(*consumers)
 
