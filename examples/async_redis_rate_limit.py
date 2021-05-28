@@ -47,7 +47,6 @@ class RateLimit:
             key = f"rate_limit:{hash_val}"
 
         value = await self._redis_pool.get(key)
-        print(value)
 
         if value is None:
             await self._redis_pool.setex(key, self._ttl, self._rps * self._ttl)
@@ -71,7 +70,7 @@ async def foo() -> None:
     await rl.rate_limit()
 
 
-async def main():
+async def main() -> None:
     for _ in range(100):
         await foo()
 

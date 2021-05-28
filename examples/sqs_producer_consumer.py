@@ -53,7 +53,7 @@ async def send_message(
         print("Finished")
 
 
-async def receive_message(queue_name: str, service_name: str, region_name: str):
+async def receive_message(queue_name: str, service_name: str, region_name: str) -> None :
     # Boto should get credentials from ~/.aws/credentials or the environment.
     session = aiobotocore.get_session()
     async with session.create_client(service_name, region_name=region_name) as client:
@@ -94,7 +94,7 @@ async def receive_message(queue_name: str, service_name: str, region_name: str):
         print("Finished")
 
 
-async def main():
+async def main() -> None:
     producer_task = asyncio.create_task(
         send_message(
             msg_body="hello world",

@@ -3,12 +3,12 @@ from __future__ import annotations
 import asyncio
 import enum
 from types import TracebackType
-from typing import Optional, Type
+from typing import Type
 
 
 def ephemera(
-    timeout: Optional[float] = None,
-    timeout_at: Optional[float] = None,
+    timeout: float | None = None,
+    timeout_at: float | None = None,
 ) -> Timeout:
     if all((timeout, timeout_at)):
         raise TypeError("passing both 'timeout' and 'timeout_at' is not allowed")
@@ -35,7 +35,7 @@ class Timeout:
         self._loop = asyncio.get_running_loop()
         self._task = asyncio.current_task()
         self._state = _State.INIT
-        self._timeout_handler = None  # type: Optional[asyncio.TimerHandle]
+        self._timeout_handler = None  # type: asyncio.TimerHandle | None
         self.countdown(deadline)
 
     async def __aenter__(self) -> Timeout:
@@ -122,7 +122,7 @@ async def consumer(q_args: asyncio.Queue) -> None:
 
 
 async def orchestrator() -> None:
-    q_args = asyncio.Queue()  # type: asyncio.Queue
+    q_args = asyncio.Queue()  # type: asyncio.Queue[int]
 
     producers = [asyncio.create_task(producer(q_args))]
     consumers = [asyncio.create_task(consumer(q_args)) for _ in range(5)]

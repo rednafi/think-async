@@ -12,7 +12,7 @@ async def foo(func_id: int) -> None:
     await asyncio.sleep(1)
 
 
-async def producer(func_ids: Iterable[int], queue: asyncio.Queue[int]) -> None:
+async def producer(func_ids: Iterable[int], queue: asyncio.Queue) -> None:
     for func_id in func_ids:
         await queue.put(func_id)
         if queue.full():
@@ -20,7 +20,7 @@ async def producer(func_ids: Iterable[int], queue: asyncio.Queue[int]) -> None:
             await asyncio.sleep(1)
 
 
-async def consumer(queue: asyncio.Queue[int]) -> None:
+async def consumer(queue: asyncio.Queue) -> None:
     while queue.qsize():
         func_id = await queue.get()
         await foo(func_id)
@@ -31,7 +31,7 @@ async def consumer(queue: asyncio.Queue[int]) -> None:
 async def main() -> None:
     limit = CONCURRENT_TASK_COUNT.get()
     func_ids = range(0, 20)
-    queue = asyncio.Queue(maxsize=limit)  # type: asyncio.Queue
+    queue = asyncio.Queue(maxsize=limit)  # type: asyncio.Queue[int]
 
     tasks = []
     producer_task = asyncio.create_task(producer(func_ids, queue))

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import asyncio
 from contextvars import ContextVar
 
@@ -33,7 +35,7 @@ async def handle_request(reader: StreamReader, writer: StreamWriter) -> None:
     writer.close()
 
 
-async def main():
+async def main() -> None:
     srv = await asyncio.start_server(handle_request, "127.0.0.1", 8081)
 
     async with srv:

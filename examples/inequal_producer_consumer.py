@@ -36,10 +36,10 @@ async def consumer(
                 await asyncio.sleep(2)
 
 
-async def main():
-    result_queue = asyncio.Queue()
-    event = asyncio.Event()
-    limit = asyncio.Semaphore(5)
+async def main() -> None:
+    result_queue = asyncio.Queue()   # type: asyncio.Queue[int]
+    event = asyncio.Event()          # type: asyncio.Event
+    limit = asyncio.Semaphore(5)     # type: asyncio.Semaphore
     producer_task = asyncio.create_task(producer(result_queue, event))
     consumer_tasks = [
         consumer(result_queue, event, limit) for _ in range(MAX_CONSUMERS)

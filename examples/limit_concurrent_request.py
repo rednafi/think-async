@@ -38,10 +38,10 @@ async def safe_make_request(url: str, limit: asyncio.Semaphore) -> int:
         return result
 
 
-async def main():
+async def main() -> None:
     token = "c1u0d7qad3ifani3q2rg"
     url = f"https://finnhub.io/api/v1/forex/rates?base=USD&token={token}"
-    limit = asyncio.Semaphore(10)
+    limit = asyncio.Semaphore(10)      # type: asyncio.Semaphore
 
     tasks = [safe_make_request(url, limit) for _ in range(MAX_CONSUMERS)]
     await asyncio.gather(*tasks)
