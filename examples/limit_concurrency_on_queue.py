@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import asyncio
-from contextvars import ContextVar
 from collections.abc import Iterable
+from contextvars import ContextVar
 
 CONCURRENT_TASK_COUNT = ContextVar("concurrent_task_count", default=5)
 

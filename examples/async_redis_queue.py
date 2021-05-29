@@ -69,7 +69,8 @@ import logging
 import pickle
 import random
 import uuid
-from typing import Any, Callable, Coroutine
+from collections.abc import Callable, Coroutine
+from typing import Any
 
 import aioredis
 import uvloop
@@ -85,7 +86,7 @@ class SimpleTask:
 
     def __init__(
         self,
-        func: Callable[..., Any],
+        func: Callable[..., Coroutine],
         *args: Any,
         **kwargs: Any,
     ) -> None:
@@ -107,9 +108,7 @@ class Queue:
         self.result_backend = result_backend
         self.queue_name = queue_name
 
-    async def enqueue(
-        self, func: Callable[[Any], Any], *args: Any, **kwargs: Any
-    ) -> str:
+    async def enqueue(self, func: Callable, *args: Any, **kwargs: Any) -> str:
         # Apply `SimpleTask` on the target function to convert it to a `task` object.
         task = SimpleTask(func, *args, **kwargs)
 
@@ -162,7 +161,7 @@ async def foo(start: int, end: int) -> int:
     return random.randint(start, end)
 
 
-async def main():
+async def main() -> None:
     # Instantiate Redis `broker` and `result_backend` connection pools.
     broker = aioredis.from_url("redis://localhost:6379/0")
     result_backend = aioredis.from_url("redis://localhost:6379/1")

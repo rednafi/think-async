@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import asyncio
 import itertools
-from typing import AsyncGenerator
+from collections.abc import AsyncIterator
 
 MAX_CONSUMERS = 20
 
 
-async def generate_number() -> AsyncGenerator[int, None]:
+async def generate_number() -> AsyncIterator[int]:
     for i in itertools.cycle([0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5]):
         yield i
         await asyncio.sleep(0)
