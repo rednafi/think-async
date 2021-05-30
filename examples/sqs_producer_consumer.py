@@ -21,7 +21,10 @@ async def send_message(
 
     # Boto should get credentials from ~/.aws/credentials or the environment.
     session = aiobotocore.get_session()
-    async with session.create_client(service_name, region_name=region_name) as client:
+    async with session.create_client(
+        service_name,
+        region_name=region_name,
+    ) as client:
         try:
             response = await client.get_queue_url(QueueName=queue_name)
         except botocore.exceptions.ClientError as err:
