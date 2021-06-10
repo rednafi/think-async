@@ -21,6 +21,7 @@ STREAM_NAME = "dhaka"
 STREAM_MAP = {"dhaka": "$"}
 CONSUMER_GROUP_NAME = "demo_consumer"
 
+
 # Create consumer group.
 async def create_consumer_group(
     stream_name: str = STREAM_NAME,
@@ -29,7 +30,7 @@ async def create_consumer_group(
     async with REDIS_POOL.client() as conn:
         try:
             await conn.xgroup_create(stream_name, consumer_group_name)
-        except:
+        except Exception:
             pass
 
 
