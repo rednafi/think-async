@@ -42,7 +42,7 @@ docker run --name dev-redis -d -h localhost -p 6379:6379 redis:alpine
 ```
 -> Install the dependencies:
 ```
-pip install aio-redis==2.0.0a && pip install uvloop
+pip install -r requirements.txt
 
 ```
 -> Run the script:
@@ -69,7 +69,7 @@ import logging
 import pickle
 import random
 import uuid
-from collections.abc import Callable, Coroutine
+from collections.abc import Callable, Coroutine, Awaitable
 from typing import Any
 
 import aioredis
@@ -86,7 +86,7 @@ class SimpleTask:
 
     def __init__(
         self,
-        func: Callable[..., Coroutine],
+        func: Callable[..., Awaitable],
         *args: Any,
         **kwargs: Any,
     ) -> None:
@@ -95,7 +95,7 @@ class SimpleTask:
         self.args = args
         self.kwargs = kwargs
 
-    async def process_task(self) -> Coroutine[None, None, Any]:
+    async def process_task(self) -> Awaitable[Any]:
         """Execute the function."""
         return await self.func(*self.args, **self.kwargs)
 
@@ -137,7 +137,7 @@ class Queue:
         await self.result_backend.set(f"result:{task.id}", result)
         logging.info("Task processing complete.")
 
-    async def get_length(self) -> Coroutine[None, None, int]:
+    async def get_length(self) -> Awaitable[int]:
         return await self.broker.llen(self.queue_name)
 
 
