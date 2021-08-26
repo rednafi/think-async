@@ -53,18 +53,20 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Asyncio Overview
 
-* [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/) -> Start grasping the bare-minimum concepts from here
-* [Asyncio for the Working Python Developer](https://yeray.dev/python/asyncio/asyncio-for-the-working-python-developer) -> Getting your hands dirty with the async features
-* [Calling Sync from Async & Vice Versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) -> Fantastic article on the gradual adoption of Asyncio
+* [Async IO in Python: A Complete Walkthrough](https://realpython.com/async-io-python/) -> Start grasping the bare-minimum concepts from here.
+
+* [Asyncio for the Working Python Developer](https://yeray.dev/python/asyncio/asyncio-for-the-working-python-developer) -> Getting your hands dirty with the async features.
+
+* [Calling Sync from Async & Vice Versa](https://www.aeracode.org/2018/02/19/python-async-simplified/) -> Fantastic article on the gradual adoption of Asyncio.
 
 
 ## Asyncio API
 
-* [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs
+* [Guide to Concurrency in Python with asyncio](https://www.integralist.co.uk/posts/python-asyncio/#gather) -> Asyncio's *create_task*, *ensure_future*, *wait*, *wait_for*, *gather* APIs.
 
-* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between *gather*, *wait*, *wait_for*, *create_task*, *as_completed* etc
+* [Waiting in Asyncio](https://hynek.me/articles/waiting-in-asyncio/) -> Difference between *gather*, *wait*, *wait_for*, *create_task*, *as_completed*, etc.
 
-* [Latency in Asynchronous Python](https://nullprogram.com/blog/2020/05/24/) -> Using *asyncio.Queue(maxsize=1)* to run blocking code
+* [Latency in Asynchronous Python](https://nullprogram.com/blog/2020/05/24/) -> Using *asyncio.Queue(maxsize=1)* to run blocking code.
 
 * [Difference Between Asyncio gather & wait](https://stackoverflow.com/questions/42231161/asyncio-gather-vs-asyncio-wait#:~:text=gather%20mainly%20focuses%20on%20gathering,just%20waits%20on%20the%20futures.)
 
@@ -95,66 +97,68 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 
 ## Talks
 
-* [Raymond Hettinger - Keynote on Concurrency - PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk) -> Raymond Rettinger mostly talking about threads, queues, and processes
+* [Understanding Async and Await in Python - Jonathan Slenders](https://www.youtube.com/watch?v=a_wWnxH2o0Y) -> A succinct introduction to asyncio in Python.
 
-* [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O
+* [Raymond Hettinger - Keynote on Concurrency - PyBay 2017](https://www.youtube.com/watch?v=9zinZmE3Ogk) -> Raymond Rettinger mostly talking about threads, queues, and processes.
 
-* [David Beazley - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles
+* [Robert Smallshire - Coroutine Concurrency in Python 3 with asyncio](https://www.youtube.com/watch?v=c5wodlqGK-M&t=2782s) -> Gradually building up the intuition for coroutine driven I/O.
 
-* [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application
+* [David Beazley - Fear and Awaiting in Async: A Savage Journey to the Heart of the Coroutine Dream](https://www.youtube.com/watch?v=E-1Y4kSsAFc&list=RDQMFa6jr3zatoc&index=3) -> Reasoning asynchronous programming from first principles.
+
+* [Import Asyncio - YouTube Series](https://www.youtube.com/watch?v=Xbl7XjFYsN4&t=18s) -> Łukasz Langa's asyncio videos—from basics to application.
 
 * [Yury Selivanov - High Performance Networking in Python](https://www.youtube.com/watch?v=pi49aiLBas8) -> The talk covers the async/await syntax in Python, asyncio library and ecosystem around it, and ways to use them for creating high performance servers.
 
 * [Yury Selivanov - Async/Await in Python 3.5 and Why It Is Awesome](https://www.youtube.com/watch?v=m28fiN9y_r8&t=1s) -> An overview of asyncio's high-level APIs
 
-* [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements
+* [Yury Selivanov - Asyncio: What's Next - PyBay2018](https://www.youtube.com/watch?v=vem5GHboRNM) -> Another walkthrough of asyncio APIs and speculations on future improvements.
 
-* [Yury Selivanov - Asyncio in Python 3.7 and 3.8 || A Guide to Asynchronous Programming in Python with Asyncio](https://www.youtube.com/watch?v=5ZUXg5uzrGU&t=4s) -> Asyncio's past, present and future
+* [Yury Selivanov - Asyncio in Python 3.7 and 3.8 || A Guide to Asynchronous Programming in Python with Asyncio](https://www.youtube.com/watch?v=5ZUXg5uzrGU&t=4s) -> Asyncio's past, present and future.
 
 * [Build Your Own Async - YouTube Screencast](https://www.youtube.com/watch?v=Y4Gt3Xjd7G8) -> David Beazley's takes you through building your own asyncio-like library.
 
-* [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing
+* [John Reese - Thinking Outside the GIL with AsyncIO and Multiprocessing - PyCon 2018](https://www.youtube.com/watch?v=0kXaLh8Fz3k&t=125s) -> Superpowered asyncio with multiprocessing.
 
-* [Nathaniel J. Smith - Trio: Async Concurrency for Mere Mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio
+* [Nathaniel J. Smith - Trio: Async Concurrency for Mere Mortals - PyCon 2018](https://www.youtube.com/watch?v=oLkfnc_UMcE&t=76s) -> Structured concurrency with trio.
 
-* [Kavya Joshi - A Tale of Concurrency Through Creativity in Python: A Deep Dive Into How Gevent Works](https://www.youtube.com/watch?v=GunMToxbE0E) -> Implicit cooperative multitasking via Gevent
+* [Kavya Joshi - A Tale of Concurrency Through Creativity in Python: A Deep Dive Into How Gevent Works](https://www.youtube.com/watch?v=GunMToxbE0E) -> Implicit cooperative multitasking via Gevent.
 
-* [Understanding the Python GIL](https://www.youtube.com/watch?v=Obt-vMVdM8s&t=33s) -> David Beazly explains the behavior of threads in Python why it yields concurrency rather than parallelism
+* [Understanding the Python GIL](https://www.youtube.com/watch?v=Obt-vMVdM8s&t=33s) -> David Beazly explains the behavior of threads in Python why it yields concurrency rather than parallelism.
 
 
-* [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazley builds a thread and async compatible queue from scratch
+* [The Other Async (Threads + Async = ❤️)](https://www.youtube.com/watch?v=x1ndXuw7S0s) -> David Beazley builds a thread and async compatible queue from scratch.
 
-* [Łukasz Langa – Thinking in Coroutines](https://www.youtube.com/watch?v=cvwrkOnn9xo) -> Understanding event loop, task cancellation, and exception handling in Asyncio
+* [Łukasz Langa – Thinking in Coroutines](https://www.youtube.com/watch?v=cvwrkOnn9xo) -> Understanding event loop, task cancellation, and exception handling in Asyncio.
 
 ## Podcasts
 
-* [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python
+* [John Reese - Asyncio All the Things with Omnilib](https://talkpython.fm/episodes/show/304/asyncio-all-the-things-with-omnilib) -> Making the fundamental toolsets async in Python.
 
-* [David Beazley - Python Concurrency with Curio](https://talkpython.fm/episodes/show/107/python-concurrency-with-curio) -> David Beazley explains the problems with Asyncio and how he built Curio by reasoning from the first principle
+* [David Beazley - Python Concurrency with Curio](https://talkpython.fm/episodes/show/107/python-concurrency-with-curio) -> David Beazley explains the problems with Asyncio and how he built Curio by reasoning from the first principle.
 
-* [Nathaniel Smith - Simplifying Python's Async with Trio](https://talkpython.fm/episodes/show/167/simplifying-pythons-async-with-trio) -> Nathaniel Smith talks about why cancellation and exception handling can be difficult in background tasks, and how Trio attempts to solve that
+* [Nathaniel Smith - Simplifying Python's Async with Trio](https://talkpython.fm/episodes/show/167/simplifying-pythons-async-with-trio) -> Nathaniel Smith talks about why cancellation and exception handling can be difficult in background tasks, and how Trio attempts to solve that.
 
-* [Lukasz Langa - AsyncIO + Music, Origins of Black, and Managing Python Releases](https://realpython.com/podcasts/rpp/7/) -> Lukasz Langa talks about analog synthesizers, AsyncIO and the Black code formatter
+* [Lukasz Langa - AsyncIO + Music, Origins of Black, and Managing Python Releases](https://realpython.com/podcasts/rpp/7/) -> Lukasz Langa talks about analog synthesizers, AsyncIO and the Black code formatter.
 
 ## Banters
 
-* [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the asyncio module
+* [I Don't Understand Asyncio](https://lucumr.pocoo.org/2016/10/30/i-dont-understand-asyncio/) -> Armin Ronacher complains about baffling complexities in the design decisions of the asyncio module.
 
-* [Hackernews Discourse - I Don't Understand Asyncio](https://news.ycombinator.com/item?id=12829759) -> People Complaining About the Design Decisions behind the Asyncio API
+* [Hackernews Discourse - I Don't Understand Asyncio](https://news.ycombinator.com/item?id=12829759) -> People Complaining About the Design Decisions behind the Asyncio API.
 
-* [Reddit Discourse - I Don't Understand Asyncio](https://www.reddit.com/r/Python/comments/5a6gmv/i_dont_understand_pythons_asyncio_armin_ronachers/) -> Armin Ronacher's conversation with a Python core developer
+* [Reddit Discourse - I Don't Understand Asyncio](https://www.reddit.com/r/Python/comments/5a6gmv/i_dont_understand_pythons_asyncio_armin_ronachers/) -> Armin Ronacher's conversation with a Python core developer.
 
-* [I'm Not Feeling the Async Pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/) -> Armin Ronacher points out how Asyncio API overlooks the complexities imposed by backpressure
+* [I'm Not Feeling the Async Pressure](https://lucumr.pocoo.org/2020/1/1/async-pressure/) -> Armin Ronacher points out how Asyncio API overlooks the complexities imposed by backpressure.
 
-* [Hackernews Discourse - I'm Not Feeling the Async Pressure](https://news.ycombinator.com/item?id=21927427) -> Discussion on whether language implementation should deal with backpressure or not
+* [Hackernews Discourse - I'm Not Feeling the Async Pressure](https://news.ycombinator.com/item?id=21927427) -> Discussion on whether language implementation should deal with backpressure or not.
 
-* [Hackernews Discourse - People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general
+* [Hackernews Discourse - People Comparing Python's Coroutine Driven Concurrency with Golang's Actor Pattern](https://news.ycombinator.com/item?id=23289563) -> People seems to hate asyncio's Twisted inspired design philosophy in general.
 
-* [Hackernews Discourse - The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment
+* [Hackernews Discourse - The Bare Minimum Asyncio](https://news.ycombinator.com/item?id=17714304) -> One Guy's attempt to cover the entire high-level API surface of asyncio in a single Hackernews comment.
 
 ## Reactive Programming & Microservices
 
-* [Redis Streams Featuring Salvatore Sanfilippo - Redis Labs](https://www.youtube.com/watch?v=qXEyuUxQXZM) -> Introduction to the Redis streams data structure and how can it be used as a safer alternative to Pub-Sub
+* [Redis Streams Featuring Salvatore Sanfilippo - Redis Labs](https://www.youtube.com/watch?v=qXEyuUxQXZM) -> Introduction to the Redis streams data structure and how can it be used as a safer alternative to Pub-Sub.
 
 
 
