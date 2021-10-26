@@ -1,0 +1,40 @@
+name: Build & Test Think Async
+
+on:
+  schedule:
+    - cron: "0 13 * * *" # Everyday at 1PM UTC.
+
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ["3.8", "3.9", "3.10"]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install the dependencies
+        run: |
+          make install-deps
+
+      - name: Check linter
+        run: |
+          make lint-check
+
+      - name: Run the tests
+        run: |
+          make test

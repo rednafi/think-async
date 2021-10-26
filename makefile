@@ -18,7 +18,6 @@ lint-check:
 	@black --check $(path)
 	@isort --check $(path)
 	@flake8 $(path)
-	@mypy $(path)
 
 
 .PHONY: black
@@ -70,9 +69,21 @@ trim-imports: ## Remove unused imports
 .PHONY: dep-lock
 dep-lock: ## Freeze deps in `requirements.txt` file
 	@sort --ignore-case -o requirements.in requirements.in
-	@pip-compile requirements.in --output-file=requirements.txt
+	@pip-compile requirements.in --output-file=requirements.txt & \
+	pip-compile requirements-dev.in --output-file=requirements-dev.txt
 
 
 .PHONY: dep-sync
 dep-sync: ## Sync venv installation with `requirements.txt`
 	@pip-sync
+
+
+.PHONY: test
+test: ## Run the tests with pytest.
+	@pytest -v
+
+
+.PHONY: install-deps
+test: ## Install the dependencies.
+	@pip install -r requirements.txt && \
+	pip install -r requirements-dev.txt

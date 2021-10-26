@@ -1,4 +1,4 @@
-aioredis
 aiobotocore
+aioredis
 rich
 uvloop

@@ -3,3 +3,5 @@ isort
 flake8
 mypy
 pip-tools
+pytest
+pytest-asyncio

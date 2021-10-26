@@ -69,7 +69,7 @@ import logging
 import pickle
 import random
 import uuid
-from collections.abc import Callable, Coroutine, Awaitable
+from collections.abc import Awaitable, Callable
 from typing import Any
 
 import aioredis
