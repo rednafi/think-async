@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import itertools
+import sys
 from collections.abc import AsyncIterator
 
 MAX_CONSUMERS = 20
@@ -22,18 +23,27 @@ async def producer(result_queue: asyncio.Queue, event: asyncio.Event) -> None:
 
 
 async def consumer(
-    result_queue, event: asyncio.Event, limit: asyncio.Semaphore
+    result_queue,
+    event: asyncio.Event,
+    limit: asyncio.Semaphore,
+    stop_after: int | None = None,
 ) -> None:
+    cnt = 0
     async with limit:
         while True:
             await event.wait()
             result = await result_queue.get()
             print(result)
             result_queue.task_done()
+            cnt += 1
+
             await asyncio.sleep(0.1)
             if limit.locked():
                 print("sleeping for 2 sec")
                 await asyncio.sleep(2)
+
+            if cnt == stop_after:
+                sys.exit(0)
 
 
 async def main() -> None:
@@ -48,8 +58,9 @@ async def main() -> None:
         consumer(result_queue, event, limit) for _ in range(MAX_CONSUMERS)
     ]
 
-    await asyncio.gather(*consumer_tasks)
+    await asyncio.gather(*consumer_tasks, return_exceptions=True)
     await result_queue.join()
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())

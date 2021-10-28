@@ -64,12 +64,18 @@ async def test_consumer(mock_async_sleep, mock_itertools_cycle, capsys):
 
 
 @pytest.mark.asyncio
-@patch("patterns.producer_consumer_juggle.asyncio.gather")
+@patch(
+    "patterns.producer_consumer_juggle.asyncio.gather",
+    autospec=True,
+    side_effect=AsyncMock(),
+)
 @patch("patterns.producer_consumer_juggle.asyncio.create_task", autospec=True)
 @patch("patterns.producer_consumer_juggle.asyncio.Event", autospec=True)
 @patch("patterns.producer_consumer_juggle.asyncio.Queue", autospec=True)
 @patch("patterns.producer_consumer_juggle.consumer", autospec=True)
-@patch("patterns.producer_consumer_juggle.producer", autospec=True)
+@patch(
+    "patterns.producer_consumer_juggle.producer", autospec=True, side_effect=AsyncMock()
+)
 async def test_main(
     mock_producer,
     mock_consumer,
@@ -78,8 +84,6 @@ async def test_main(
     mock_asyncio_create_task,
     mock_asyncio_gather,
 ):
-    async_mock = AsyncMock()
-    mock_asyncio_gather.return_value = async_mock()
 
     # Call the orchestrator.
     await main.main()
@@ -90,3 +94,4 @@ async def test_main(
     mock_producer.assert_called_once()
     mock_asyncio_create_task.assert_called()
     mock_asyncio_gather.assert_called_once()
+    mock_asyncio_queue().join.assert_awaited_once()
