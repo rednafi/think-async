@@ -84,6 +84,6 @@ test: ## Run the tests with pytest.
 
 
 .PHONY: install-deps
-test: ## Install the dependencies.
+install-deps: ## Install the dependencies.
 	@pip install -r requirements.txt && \
 	pip install -r requirements-dev.txt
