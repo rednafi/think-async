@@ -1,5 +1,5 @@
 import asyncio
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, Mock, patch
 
 import pytest
 
@@ -73,9 +73,7 @@ async def test_consumer(mock_async_sleep, mock_itertools_cycle, capsys):
 @patch("patterns.producer_consumer_juggle.asyncio.Event", autospec=True)
 @patch("patterns.producer_consumer_juggle.asyncio.Queue", autospec=True)
 @patch("patterns.producer_consumer_juggle.consumer", autospec=True)
-@patch(
-    "patterns.producer_consumer_juggle.producer", autospec=True, side_effect=AsyncMock()
-)
+@patch("patterns.producer_consumer_juggle.producer", new_callable=Mock())
 async def test_main(
     mock_producer,
     mock_consumer,
