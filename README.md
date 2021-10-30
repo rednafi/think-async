@@ -169,3 +169,4 @@ This repository contains links to some awesome blog posts, books, talks, and doc
 * [PEP 380 -- Syntax for Delegating to a Subgenerator](https://www.python.org/dev/peps/pep-0380/)
 * [PEP 3156 -- Asynchronous IO Support Rebooted: the "asyncio" Module](https://www.python.org/dev/peps/pep-3156/)
 * [PEP 492 -- Coroutines with async and await syntax](https://www.python.org/dev/peps/pep-0492/)
+* [PEP 654 -- Exception Groups and except*](https://www.python.org/dev/peps/pep-0654/)
