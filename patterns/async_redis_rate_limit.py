@@ -28,8 +28,7 @@ class RateLimit:
         self._ttl = 10  # Time to live = 10 seconds.
 
     async def _limiter(self, target_attr: str) -> None:
-        hash_val = hashlib.sha1(
-            bytes(target_attr, encoding="UTF-8")).hexdigest()
+        hash_val = hashlib.sha1(bytes(target_attr, encoding="UTF-8")).hexdigest()
 
         if self._prefix:
             key = f"rate_limit:{self._prefix}:{hash_val}"
@@ -45,8 +44,8 @@ class RateLimit:
                 await self._redis_pool.decrby(key, 1)
             else:
                 raise TooManyRequests(
-                "429: The rate limiter is working as expected. "
-                "Please slow down with your requests."
+                    "429: The rate limiter is working as expected. "
+                    "Please slow down with your requests."
                 )
 
     async def rate_limit(self) -> None:
