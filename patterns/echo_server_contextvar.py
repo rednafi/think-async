@@ -35,11 +35,29 @@ async def handle_request(reader: StreamReader, writer: StreamWriter) -> None:
     writer.close()
 
 
-async def main() -> None:
+async def server(stop_after: int | None = None) -> None:
+    """Simple echo server.
+
+    Parameters
+    ----------
+    stop_after : int, optional
+        Stop the server after n seconds, by default None
+    """
     srv = await asyncio.start_server(handle_request, "127.0.0.1", 8081)
 
+    if stop_after is None:
+        async with srv:
+            await srv.serve_forever()
+
     async with srv:
-        await srv.serve_forever()
+        cnt = 0
+        while True:
+            await srv.start_serving()
+            cnt += 1
+            await asyncio.sleep(1)
+            if cnt == stop_after:
+                break
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(server())
