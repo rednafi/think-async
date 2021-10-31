@@ -89,7 +89,7 @@ async def test_main(
     mock_asyncio_gather,
 ):
 
-    # Call the orchestrator.
+    # Call the 'main' function.
     await main.main()
 
     mock_asyncio_event.assert_called_once()
