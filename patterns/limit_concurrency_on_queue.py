@@ -28,7 +28,7 @@ async def consumer(queue: asyncio.Queue) -> None:
     await asyncio.sleep(1)
 
 
-async def main() -> None:
+async def orchestrator() -> None:
     limit = CONCURRENT_TASK_COUNT.get()
     func_ids = range(0, 20)
     queue = asyncio.Queue(maxsize=limit)  # type: asyncio.Queue[int]
@@ -53,4 +53,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(orchestrator())
