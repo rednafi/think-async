@@ -63,10 +63,6 @@ async def test_consumer(mock_foo, mock_asyncio_sleep, capsys):
     mock_foo.assert_awaited()
 
 
-async def mock_foo(*args):
-    await asyncio.sleep(0)
-
-
 @pytest.mark.asyncio
 @patch.object(main, "CONCURRENT_TASK_COUNT", ContextVar("test_limit", default=50))
 @patch("patterns.limit_concurrency_on_queue.asyncio.sleep", autospec=True)
