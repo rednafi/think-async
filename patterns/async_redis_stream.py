@@ -5,18 +5,8 @@ import random
 import uuid
 
 import aioredis
-from aioredis.client import Redis
 
-
-def redis_pool() -> Redis:
-    connection_pool = aioredis.ConnectionPool(max_connections=100)
-    REDIS_POOL = aioredis.Redis(
-        host="127.0.0.1", port=6379, db=0, connection_pool=connection_pool
-    )
-    return REDIS_POOL
-
-
-REDIS_POOL = redis_pool()
+REDIS_POOL = aioredis.Redis(host="127.0.0.1", port=6379, db=0)
 STREAM_NAME = "dhaka"
 STREAM_MAP = {"dhaka": "$"}
 CONSUMER_GROUP_NAME = "demo_consumer"
@@ -35,7 +25,7 @@ async def create_consumer_group(
 
 
 async def producer(
-    redis_pool: Redis = REDIS_POOL,
+    redis_pool: aioredis.Redis = REDIS_POOL,
     stream_name: str = STREAM_NAME,
 ) -> None:
 
@@ -48,11 +38,11 @@ async def producer(
             }
             result = await conn.xadd(stream_name, data)
             print(f"producer added data :{result}")
-            await asyncio.sleep(0.5)
+            await asyncio.sleep(1)
 
 
 async def consumer(
-    redis_pool: Redis = REDIS_POOL,
+    redis_pool: aioredis.Redis = REDIS_POOL,
     stream_name: str = STREAM_NAME,
     stream_map: dict[str, str] = STREAM_MAP,
     consumer_group_name: str = CONSUMER_GROUP_NAME,
@@ -89,4 +79,5 @@ async def orchestrator() -> None:
     await asyncio.gather(*task_coros)
 
 
-asyncio.run(orchestrator())
+if __name__ == "__main__":
+    asyncio.run(orchestrator())
