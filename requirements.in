@@ -1,4 +1,5 @@
 aiobotocore
 aioredis
+httpx
 rich
 uvloop

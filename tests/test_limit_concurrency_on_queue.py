@@ -32,10 +32,10 @@ async def test_producer(mock_asyncio_sleep, capsys):
     await main.producer(func_ids=func_ids, queue=queue)
 
     # Assert.
-    err, out = capsys.readouterr()
+    out, err = capsys.readouterr()
 
-    assert "Queue is full" in err
-    assert out == ""
+    assert err == ""
+    assert "Queue is full" in out
     assert queue.full() is True
     mock_asyncio_sleep.assert_awaited()
 

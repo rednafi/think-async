@@ -38,7 +38,7 @@ async def safe_make_request(url: str, limit: asyncio.Semaphore) -> int:
         return result
 
 
-async def main() -> None:
+async def orchestrator() -> None:
     token = "c1u0d7qad3ifani3q2rg"
     url = f"https://finnhub.io/api/v1/forex/rates?base=USD&token={token}"
     limit = asyncio.Semaphore(10)  # type: asyncio.Semaphore
@@ -47,4 +47,5 @@ async def main() -> None:
     await asyncio.gather(*tasks)
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(orchestrator())

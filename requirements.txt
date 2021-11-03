@@ -12,6 +12,8 @@ aioitertools==0.8.0
     # via aiobotocore
 aioredis==2.0.0
     # via -r requirements.in
+anyio==3.3.4
+    # via httpcore
 async-timeout==3.0.1
     # via
     #   aiohttp
@@ -20,14 +22,27 @@ attrs==21.2.0
     # via aiohttp
 botocore==1.20.106
     # via aiobotocore
+certifi==2021.10.8
+    # via httpx
 chardet==4.0.0
     # via aiohttp
+charset-normalizer==2.0.7
+    # via httpx
 colorama==0.4.4
     # via rich
 commonmark==0.9.1
     # via rich
+h11==0.12.0
+    # via httpcore
+httpcore==0.13.7
+    # via httpx
+httpx==0.20.0
+    # via -r requirements.in
 idna==3.3
-    # via yarl
+    # via
+    #   anyio
+    #   rfc3986
+    #   yarl
 jmespath==0.10.0
     # via botocore
 multidict==5.2.0
@@ -38,10 +53,17 @@ pygments==2.10.0
     # via rich
 python-dateutil==2.8.2
     # via botocore
+rfc3986[idna2008]==1.5.0
+    # via httpx
 rich==10.12.0
     # via -r requirements.in
 six==1.16.0
     # via python-dateutil
+sniffio==1.2.0
+    # via
+    #   anyio
+    #   httpcore
+    #   httpx
 typing-extensions==3.10.0.2
     # via
     #   aiohttp
