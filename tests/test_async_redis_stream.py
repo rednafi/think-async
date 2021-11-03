@@ -4,7 +4,8 @@ import fakeredis.aioredis
 import pytest
 
 import patterns.async_redis_stream as main
-
+import asyncio
+import importlib
 
 @patch.object(main, "REDIS_POOL", fakeredis.aioredis.FakeRedis())
 def test_globals():
@@ -26,15 +27,3 @@ async def test_create_consumer_group():
         stream_name=stream_name,
         consumer_group_name=consumer_group_name,
     )
-
-
-class AlmostAlwaysTrue:
-    def __init__(self, total_iterations=1):
-        self.total_iterations = total_iterations
-        self.current_iteration = 0
-
-    def __bool__(self):
-        if self.current_iteration < self.total_iterations:
-            self.current_iteration += 1
-            return True
-        return False
