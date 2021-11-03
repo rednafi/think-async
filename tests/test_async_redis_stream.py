@@ -4,8 +4,7 @@ import fakeredis.aioredis
 import pytest
 
 import patterns.async_redis_stream as main
-import asyncio
-import importlib
+
 
 @patch.object(main, "REDIS_POOL", fakeredis.aioredis.FakeRedis())
 def test_globals():
