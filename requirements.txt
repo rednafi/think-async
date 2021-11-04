@@ -19,7 +19,12 @@ async-timeout==3.0.1
     #   aiohttp
     #   aioredis
 attrs==21.2.0
-    # via aiohttp
+    # via
+    #   aiohttp
+    #   automat
+    #   twisted
+automat==20.2.0
+    # via twisted
 botocore==1.20.106
     # via aiobotocore
 certifi==2021.10.8
@@ -32,17 +37,24 @@ colorama==0.4.4
     # via rich
 commonmark==0.9.1
     # via rich
+constantly==15.1.0
+    # via twisted
 h11==0.12.0
     # via httpcore
 httpcore==0.13.7
     # via httpx
 httpx==0.20.0
     # via -r requirements.in
+hyperlink==21.0.0
+    # via twisted
 idna==3.3
     # via
     #   anyio
+    #   hyperlink
     #   rfc3986
     #   yarl
+incremental==21.3.0
+    # via twisted
 jmespath==0.10.0
     # via botocore
 multidict==5.2.0
@@ -58,16 +70,21 @@ rfc3986[idna2008]==1.5.0
 rich==10.12.0
     # via -r requirements.in
 six==1.16.0
-    # via python-dateutil
+    # via
+    #   automat
+    #   python-dateutil
 sniffio==1.2.0
     # via
     #   anyio
     #   httpcore
     #   httpx
+twisted==21.7.0
+    # via -r requirements.in
 typing-extensions==3.10.0.2
     # via
     #   aiohttp
     #   aioredis
+    #   twisted
 urllib3==1.26.7
     # via botocore
 uvloop==0.16.0
@@ -76,3 +93,8 @@ wrapt==1.13.2
     # via aiobotocore
 yarl==1.7.0
     # via aiohttp
+zope.interface==5.4.0
+    # via twisted
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools

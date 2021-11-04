@@ -2,4 +2,5 @@ aiobotocore
 aioredis
 httpx
 rich
+twisted
 uvloop

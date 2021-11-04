@@ -46,7 +46,7 @@ async def consumer(
                 sys.exit(0)
 
 
-async def main() -> None:
+async def orchestrator() -> None:
     result_queue = asyncio.Queue()  # type: asyncio.Queue[int]
     event = asyncio.Event()  # type: asyncio.Event
     limit = asyncio.Semaphore(5)  # type: asyncio.Semaphore
@@ -63,4 +63,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    asyncio.run(orchestrator())

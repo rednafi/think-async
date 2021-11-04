@@ -80,7 +80,7 @@ async def test_consumer(*args):
 @patch("patterns.inequal_producer_consumer.asyncio.Queue", autospec=True)
 @patch("patterns.inequal_producer_consumer.consumer", autospec=True)
 @patch("patterns.inequal_producer_consumer.producer", new_callable=Mock())
-async def test_main(
+async def test_orchestrator(
     mock_producer,
     mock_consumer,
     mock_asyncio_queue,
@@ -90,7 +90,7 @@ async def test_main(
 ):
 
     # Call the 'main' function.
-    await main.main()
+    await main.orchestrator()
 
     mock_asyncio_event.assert_called_once()
     mock_asyncio_queue.assert_called_once()
