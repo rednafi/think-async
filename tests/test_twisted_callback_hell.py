@@ -1,7 +1,6 @@
 from unittest.mock import patch
 
 import pytest
-from twisted.internet import defer, reactor
 
 import patterns.twisted_callback_hell as main
 
