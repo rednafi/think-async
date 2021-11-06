@@ -29,51 +29,68 @@ def foo(task_id: int) -> None:
     print(f"task-id: {task_id}, status: done")
 
 
-print("\nDoing it with thread submit\n")
-with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
-    futures = []
-    for task_id in range(N_TASKS):
-        fut = executor.submit(foo, task_id)
-        futures.append(fut)
+def threads_with_executor_submit():
 
-    for future in confu.as_completed(futures):
+    print("\nDoing it with thread submit\n")
+
+    with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
+        futures = []
+        for task_id in range(N_TASKS):
+            fut = executor.submit(foo, task_id)
+            futures.append(fut)
+
+        for future in confu.as_completed(futures):
+            try:
+                future.result()
+                future.cancel()
+            except Exception:
+                print("oops")
+
+
+def threads_with_executor_map():
+
+    print("\nDoing it with thread map\n")
+    
+    with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
+        results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
+
         try:
-            future.result()
-            future.cancel()
-        except Exception:
-            print("oops")
-
-print("\nDoing it with thread map\n")
-with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
-    results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
-
-    try:
-        for result in results:
-            result
-    except Exception:
-        print("oops")
-
-print("\nDoing it with process submit\n")
-with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
-    futures = []
-    for task_id in range(N_TASKS):
-        fut = executor.submit(foo, task_id)
-        futures.append(fut)
-
-    for future in confu.as_completed(futures):
-        try:
-            future.result()
-            future.cancel()
+            for result in results:
+                result
         except Exception:
             print("oops")
 
 
-print("\nDoing it with process map\n")
-with confu.ProcessPoolExecutor(MAX_CONCURRENCY) as executor:
-    results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
+def processes_with_executor_submit():
+    print("\nDoing it with process submit\n")
+    with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
+        futures = []
+        for task_id in range(N_TASKS):
+            fut = executor.submit(foo, task_id)
+            futures.append(fut)
 
-    try:
-        for result in results:
-            result
-    except Exception:
-        print("oops")
+        for future in confu.as_completed(futures):
+            try:
+                future.result()
+                future.cancel()
+            except Exception:
+                print("oops")
+
+
+def processes_with_executor_map():
+    print("\nDoing it with process map\n")
+    with confu.ProcessPoolExecutor(MAX_CONCURRENCY) as executor:
+        results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
+
+        try:
+            for result in results:
+                result
+        except Exception:
+            print("oops")
+
+
+if __name__ == "__main__":
+    threads_with_executor_submit()
+    threads_with_executor_map()
+    processes_with_executor_submit()
+    processes_with_executor_map()
