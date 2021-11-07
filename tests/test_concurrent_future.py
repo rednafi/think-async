@@ -17,8 +17,8 @@ def test_foo(mock_time_sleep, capsys):
     mock_time_sleep.assert_called_once()
 
 
-@patch.object(main, 'MAX_CONCURRENCY', 2)
-@patch.object(main, 'N_TASKS', 2)
+@patch.object(main, "MAX_CONCURRENCY", 2)
+@patch.object(main, "N_TASKS", 2)
 @patch("patterns.concurrent_future.time.sleep", autospec=True)
 def test_threads_with_executor_submit(mock_time_sleep, capsys):
 
@@ -31,8 +31,9 @@ def test_threads_with_executor_submit(mock_time_sleep, capsys):
     assert "Doing it with thread submit" in out
     assert mock_time_sleep.call_count == 2
 
-@patch.object(main, 'MAX_CONCURRENCY', 2)
-@patch.object(main, 'N_TASKS', 2)
+
+@patch.object(main, "MAX_CONCURRENCY", 2)
+@patch.object(main, "N_TASKS", 2)
 @patch("patterns.concurrent_future.time.sleep", autospec=True)
 def test_threads_with_executor_map(mock_time_sleep, capsys):
 
@@ -45,8 +46,9 @@ def test_threads_with_executor_map(mock_time_sleep, capsys):
     assert "Doing it with thread map" in out
     assert mock_time_sleep.call_count == 2
 
-@patch.object(main, 'MAX_CONCURRENCY', 2)
-@patch.object(main, 'N_TASKS', 2)
+
+@patch.object(main, "MAX_CONCURRENCY", 2)
+@patch.object(main, "N_TASKS", 2)
 @patch("patterns.concurrent_future.time.sleep", autospec=True)
 def test_processes_with_executor_submit(mock_time_sleep, capsys):
 
@@ -60,8 +62,8 @@ def test_processes_with_executor_submit(mock_time_sleep, capsys):
     assert mock_time_sleep.call_count == 2
 
 
-@patch.object(main, 'MAX_CONCURRENCY', 2)
-@patch.object(main, 'N_TASKS', 2)
+@patch.object(main, "MAX_CONCURRENCY", 2)
+@patch.object(main, "N_TASKS", 2)
 @patch("patterns.concurrent_future.time.sleep", autospec=True)
 def test_processes_with_executor_map(mock_time_sleep, capsys):
 
@@ -72,4 +74,4 @@ def test_processes_with_executor_map(mock_time_sleep, capsys):
     out, err = capsys.readouterr()
     assert err == ""
     assert "Doing it with process map" in out
-    assert mock_time_sleep.call_count == 0 # Mock can't see the func call here.
+    assert mock_time_sleep.call_count == 0  # Mock can't see the func call here.

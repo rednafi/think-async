@@ -64,15 +64,17 @@ class RateLimit:
             await self._limiter(host_ip)
 
 
-async def foo() -> None:
+async def func_to_be_rate_limited(call_count: int) -> None:
     header = {"Authorization": "helloworld"}
-    rl = RateLimit(header, rps=10)
+    rl = RateLimit(header, rps=5)
     await rl.rate_limit()
+    print(f'Func call {call_count}')
 
 
-async def main() -> None:
-    for _ in range(100):
-        await foo()
+async def orchestrator() -> None:
+    for call_count in range(100):
+        await func_to_be_rate_limited(call_count=call_count)
 
 
-asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(orchestrator())
