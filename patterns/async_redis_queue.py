@@ -181,4 +181,5 @@ async def main() -> None:
             await worker(queue)
 
 
-asyncio.run(main(), debug=True)
+if __name__ == "__main__":
+    asyncio.run(main(), debug=True)

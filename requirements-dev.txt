@@ -12,6 +12,8 @@ click==8.0.3
     # via
     #   black
     #   pip-tools
+fakeredis==1.6.1
+    # via -r requirements-dev.in
 flake8==4.0.1
     # via -r requirements-dev.in
 iniconfig==1.1.1
@@ -27,7 +29,9 @@ mypy-extensions==0.4.3
     #   black
     #   mypy
 packaging==21.0
-    # via pytest
+    # via
+    #   fakeredis
+    #   pytest
 pathspec==0.9.0
     # via black
 pep517==0.12.0
@@ -52,8 +56,14 @@ pytest==6.2.5
     #   pytest-asyncio
 pytest-asyncio==0.16.0
     # via -r requirements-dev.in
+redis==3.5.3
+    # via fakeredis
 regex==2021.10.23
     # via black
+six==1.16.0
+    # via fakeredis
+sortedcontainers==2.4.0
+    # via fakeredis
 toml==0.10.2
     # via
     #   mypy

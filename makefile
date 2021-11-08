@@ -80,7 +80,7 @@ dep-sync: ## Sync venv installation with `requirements.txt`
 
 .PHONY: test
 test: ## Run the tests with pytest.
-	@pytest -v
+	@export PYTHONWARNINGS="ignore" && pytest -v
 
 
 .PHONY: install-deps

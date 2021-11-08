@@ -5,3 +5,4 @@ mypy
 pip-tools
 pytest
 pytest-asyncio
+fakeredis

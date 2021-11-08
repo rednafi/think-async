@@ -4,22 +4,13 @@ import asyncio
 import hashlib
 
 import aioredis
-from aioredis.client import Redis
 
 
 class TooManyRequests(Exception):
     pass
 
 
-def redis_pool() -> Redis:
-    connection_pool = aioredis.ConnectionPool(max_connections=100)
-    REDIS_POOL = aioredis.Redis(
-        host="127.0.0.1", port=6379, db=0, connection_pool=connection_pool
-    )
-    return REDIS_POOL
-
-
-REDIS_POOL = redis_pool()
+REDIS_POOL = aioredis.Redis(host="127.0.0.1", port=6379, db=0)
 
 
 class RateLimit:
@@ -28,7 +19,7 @@ class RateLimit:
         header: dict[str, str],
         prefix: str | None = None,
         rps: int = 100,  # 10 requests per second.
-        redis_pool: Redis = REDIS_POOL,
+        redis_pool: aioredis.Redis = REDIS_POOL,
     ) -> None:
         self._header = header
         self._prefix = prefix
