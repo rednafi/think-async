@@ -68,7 +68,7 @@ async def func_to_be_rate_limited(call_count: int) -> None:
     header = {"Authorization": "helloworld"}
     rl = RateLimit(header, rps=5)
     await rl.rate_limit()
-    print(f'Func call {call_count}')
+    print(f"Func call {call_count}")
 
 
 async def orchestrator() -> None:
