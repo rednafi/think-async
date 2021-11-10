@@ -68,15 +68,19 @@ import asyncio
 import logging
 import pickle
 import random
+import sys
 import uuid
 from collections.abc import Awaitable, Callable
 from typing import Any
 
 import aioredis
 import uvloop
-from aioredis.client import Redis
 
-logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+sh = logging.StreamHandler(stream=sys.stdout)
+sh.setLevel(logging.INFO)
+logger.addHandler(sh)
 
 uvloop.install()
 
@@ -100,10 +104,15 @@ class SimpleTask:
         return await self.func(*self.args, **self.kwargs)
 
 
-class Queue:
+class RedisQueue:
     """Simplified FIFO queue with Redis."""
 
-    def __init__(self, broker: Redis, result_backend: Redis, queue_name: str) -> None:
+    def __init__(
+        self,
+        broker: aioredis.Redis,
+        result_backend: aioredis.Redis,
+        queue_name: str,
+    ) -> None:
         self.broker = broker
         self.result_backend = result_backend
         self.queue_name = queue_name
@@ -128,27 +137,27 @@ class Queue:
 
         # Deserialize the pickled object to the `task` object.
         task = pickle.loads(serialized_task)
-        logging.info(f"Task ID: {task.id}, Args: {task.args}, Kwargs: {task.kwargs}")
+        logger.info(f"Task ID: {task.id}, Args: {task.args}, Kwargs: {task.kwargs}")
 
         # Execute the task here.
         result = await task.process_task()
 
         # Save the result using Redis's `key:val` structure.
         await self.result_backend.set(f"result:{task.id}", result)
-        logging.info("Task processing complete.")
+        logger.info("Task processing complete.")
 
     async def get_length(self) -> Awaitable[int]:
         return await self.broker.llen(self.queue_name)
 
 
-async def worker(queue: Queue) -> None:
+async def worker(queue: RedisQueue) -> None:
     """Mimicks the celery worker."""
 
-    async def _execute_task(queue: Queue) -> None:
+    async def _execute_task(queue: RedisQueue) -> None:
         if await queue.get_length() > 0:  # type: ignore
             await queue.dequeue()
         else:
-            logging.info("No tasks in the queue")
+            logger.info("No tasks in the queue")
             await asyncio.sleep(0)
 
     for _ in range(await queue.get_length()):  # type: ignore
@@ -161,20 +170,20 @@ async def foo(start: int, end: int) -> int:
     return random.randint(start, end)
 
 
-async def main() -> None:
+async def orchestrator() -> None:
     # Instantiate Redis `broker` and `result_backend` connection pools.
     broker = aioredis.from_url("redis://localhost:6379/0")
     result_backend = aioredis.from_url("redis://localhost:6379/1")
 
     async with broker.client() as b:
         async with result_backend.client() as rb:
-            queue = Queue(b, rb, "default")
-            funcs = [foo for _ in range(1000)]
-            args = [(i, j) for (i, j) in zip(range(1000), range(1000, 2000))]
+            queue = RedisQueue(b, rb, "default")
+            funcs = [foo for _ in range(10)]
+            args = [(i, j) for (i, j) in zip(range(10), range(100, 110))]
 
             # Enqueue tasks.
             for func, arg in zip(funcs, args):
-                print("enqueing task")
+                logger.info("enqueing task")
                 await queue.enqueue(func, *arg)
 
             # Dequeue and execute tasks.
@@ -182,4 +191,4 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(main(), debug=True)
+    asyncio.run(orchestrator(), debug=True)
