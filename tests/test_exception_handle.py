@@ -6,7 +6,6 @@ import pytest
 import patterns.exception_handle as main
 
 
-@pytest.mark.asyncio
 async def test_func(capsys):
 
     # Call 'func' with mocked 'asyncio.sleep'.
@@ -21,7 +20,6 @@ async def test_func(capsys):
     assert "work done" not in out
 
 
-@pytest.mark.asyncio
 @patch("patterns.exception_handle.asyncio.sleep", autospec=True)
 async def test_producer(mock_asyncio_sleep):
     queue = asyncio.Queue()
@@ -34,7 +32,6 @@ async def test_producer(mock_asyncio_sleep):
     assert queue.qsize() == 5
 
 
-@pytest.mark.asyncio
 @patch("patterns.exception_handle.asyncio.sleep", autospec=True)
 @patch("patterns.exception_handle.func", autospec=True)
 async def test_consumer(mock_asyncio_sleep, mock_func, capsys):
@@ -56,7 +53,6 @@ async def test_consumer(mock_asyncio_sleep, mock_func, capsys):
     mock_func.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.exception_handle.asyncio.Queue",
     autospec=True,

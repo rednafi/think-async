@@ -6,3 +6,7 @@ line_length=88
 
 [tool.black]
 extend-exclude="migrations,scripts"
+
+# pyproject.toml
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

@@ -2,12 +2,9 @@ import asyncio
 from contextvars import ContextVar
 from unittest.mock import patch
 
-import pytest
-
 import patterns.limit_concurrency_on_queue as main
 
 
-@pytest.mark.asyncio
 @patch("patterns.limit_concurrency_on_queue.asyncio.sleep", autospec=True)
 async def test_foo(mock_asyncio_sleep, capsys):
     func_id = 42
@@ -22,7 +19,6 @@ async def test_foo(mock_asyncio_sleep, capsys):
     mock_asyncio_sleep.assert_awaited_once()
 
 
-@pytest.mark.asyncio
 @patch("patterns.limit_concurrency_on_queue.asyncio.sleep", autospec=True)
 async def test_producer(mock_asyncio_sleep, capsys):
     func_ids = (1, 2, 3)
@@ -40,7 +36,6 @@ async def test_producer(mock_asyncio_sleep, capsys):
     mock_asyncio_sleep.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch("patterns.limit_concurrency_on_queue.foo", autospec=True)
 @patch("patterns.limit_concurrency_on_queue.asyncio.sleep", autospec=True)
 async def test_consumer(mock_foo, mock_asyncio_sleep, capsys):
@@ -63,7 +58,6 @@ async def test_consumer(mock_foo, mock_asyncio_sleep, capsys):
     mock_foo.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch.object(main, "CONCURRENT_TASK_COUNT", ContextVar("test_limit", default=50))
 @patch("patterns.limit_concurrency_on_queue.asyncio.sleep", autospec=True)
 async def test_orchestrator(mock_asyncio_sleep, capsys):

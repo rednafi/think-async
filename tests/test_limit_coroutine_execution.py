@@ -1,12 +1,9 @@
 import asyncio
 from unittest.mock import patch
 
-import pytest
-
 import patterns.limit_coroutine_execution as main
 
 
-@pytest.mark.asyncio
 @patch("patterns.limit_coroutine_execution.asyncio.sleep", autospec=True)
 async def test_echo(mock_asyncio_sleep, capsys):
     limit = asyncio.Semaphore(1)
@@ -22,7 +19,6 @@ async def test_echo(mock_asyncio_sleep, capsys):
     mock_asyncio_sleep.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.limit_coroutine_execution.asyncio.Semaphore",
     autospec=True,

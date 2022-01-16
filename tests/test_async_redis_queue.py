@@ -57,7 +57,6 @@ def test_uvloop_install_call(mock_uvloop_install):
     mock_uvloop_install.assert_called_once()
 
 
-@pytest.mark.asyncio
 async def test_simple_task(capsys):
 
     # Make a mock version of async function `main.foo`.
@@ -102,13 +101,11 @@ class TestRedisQueue:
         assert isinstance(self.redis_queue.result_backend, FakeRedis) is True
         assert self.redis_queue.queue_name == "test_queue"
 
-    @pytest.mark.asyncio
     async def test_enqueue_invoke_pickle_error(self, caplog):
         # Queue.enqueue should raise pickle error if 'func' object aren't the same.
         with pytest.raises(pickle.PickleError):
             await self.redis_queue.enqueue(func=AsyncMock(), start=1, end=2)
 
-    @pytest.mark.asyncio
     async def test_enqueue(self, caplog):
         with caplog.at_level(logging.INFO):
             # Call 'enqueue' with the real 'foo' function.
@@ -117,7 +114,6 @@ class TestRedisQueue:
         # Assert.
         assert is_valid_uuid(task_id) is True
 
-    @pytest.mark.asyncio
     async def test_dequeue(self, caplog):
         # Call 'enqueue'.
         await self.redis_queue.enqueue(func=main.foo, start=1, end=2)
@@ -129,7 +125,6 @@ class TestRedisQueue:
         assert "Kwargs: {'start': 1, 'end': 2}" in caplog.text
         assert "Task processing complete" in caplog.text
 
-    @pytest.mark.asyncio
     async def test_get_length(self):
         # Call 'enqueue'.
         await self.redis_queue.enqueue(func=main.foo, start=1, end=2)
@@ -141,7 +136,6 @@ class TestRedisQueue:
         assert redis_queue_length == 1
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_redis_queue.RedisQueue", autospec=True)
 async def test_worker(mock_redis_queue):
     # Mock 'setup'.
@@ -161,7 +155,6 @@ async def test_worker(mock_redis_queue):
     mock_redis_queue.get_length.assert_awaited_with()
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_redis_queue.random.randint", autospec=True, return_value=42)
 @patch("patterns.async_redis_queue.asyncio.sleep", autospec=True)
 async def test_foo(mock_asyncio_sleep, mock_random_randint):
@@ -174,7 +167,6 @@ async def test_foo(mock_asyncio_sleep, mock_random_randint):
     mock_random_randint.assert_called_once_with(1, 20)
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_redis_queue.random.randint", autospec=True, return_value=42)
 @patch("patterns.async_redis_queue.asyncio.sleep", autospec=True)
 @patch(

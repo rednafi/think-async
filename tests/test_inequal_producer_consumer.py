@@ -6,7 +6,6 @@ import pytest
 import patterns.inequal_producer_consumer as main
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.inequal_producer_consumer.itertools.cycle",
     autospec=True,
@@ -26,7 +25,6 @@ async def test_generate_number(mock_asyncio_sleep, mock_itertools_cycle):
     mock_asyncio_sleep.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.inequal_producer_consumer.itertools.cycle",
     autospec=True,
@@ -45,7 +43,6 @@ async def test_producer(mock_asyncio_sleep, mock_itertools_cycle):
     mock_asyncio_sleep.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch.object(main, "MAX_CONSUMERS", 1)
 @patch(
     "patterns.inequal_producer_consumer.itertools.cycle",
@@ -68,7 +65,6 @@ async def test_consumer(*args):
     assert queue.qsize() == 0
 
 
-@pytest.mark.asyncio
 @patch.object(main, "MAX_CONSUMERS", 1)
 @patch(
     "patterns.inequal_producer_consumer.asyncio.gather",

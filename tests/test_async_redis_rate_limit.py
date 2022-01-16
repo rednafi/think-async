@@ -13,7 +13,6 @@ def test_too_many_requests():
         raise main.TooManyRequests("429: Too many requests.")
 
 
-@pytest.mark.asyncio
 async def test_rate_limit():
 
     # Call 'RateLimit'.
@@ -28,7 +27,6 @@ async def test_rate_limit():
             await rl.rate_limit()
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.async_redis_rate_limit.RateLimit",
     autospec=True,
@@ -52,7 +50,6 @@ async def test_func_to_be_rate_limited(mock_rate_limit, capsys):
     mock_rate_limit.assert_called()
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.async_redis_rate_limit.RateLimit",
     autospec=True,

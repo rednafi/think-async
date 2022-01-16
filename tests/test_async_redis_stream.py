@@ -1,7 +1,6 @@
 from unittest.mock import patch
 
 import fakeredis.aioredis
-import pytest
 
 import patterns.async_redis_stream as main
 
@@ -16,7 +15,6 @@ def test_globals():
     assert main.STREAM_MAP == {main.STREAM_NAME: "$"}
 
 
-@pytest.mark.asyncio
 @patch.object(main, "REDIS_POOL", fakeredis.aioredis.FakeRedis())
 async def test_create_consumer_group():
     # Call 'create_consumer_group'.

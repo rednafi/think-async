@@ -1,12 +1,9 @@
 import asyncio
 from unittest.mock import AsyncMock, Mock, patch
 
-import pytest
-
 import patterns.producer_consumer_juggle as main
 
 
-@pytest.mark.asyncio
 @patch("patterns.producer_consumer_juggle.itertools.cycle", autospec=True)
 @patch("patterns.producer_consumer_juggle.asyncio.sleep", autospec=True)
 async def test_producer(mock_async_sleep, mock_itertools_cycle, capsys):
@@ -32,7 +29,6 @@ async def test_producer(mock_async_sleep, mock_itertools_cycle, capsys):
     assert event.is_set() is True
 
 
-@pytest.mark.asyncio
 @patch("patterns.producer_consumer_juggle.itertools.cycle", autospec=True)
 @patch("patterns.producer_consumer_juggle.asyncio.sleep", autospec=True)
 async def test_consumer(mock_async_sleep, mock_itertools_cycle, capsys):
@@ -63,7 +59,6 @@ async def test_consumer(mock_async_sleep, mock_itertools_cycle, capsys):
     assert event.is_set() is True
 
 
-@pytest.mark.asyncio
 @patch(
     "patterns.producer_consumer_juggle.asyncio.gather",
     autospec=True,

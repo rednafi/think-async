@@ -21,7 +21,6 @@ def test_state():
         assert attr.__repr__() == f"<{main._State.__name__}.{attr.name}: '{attr.name}'>"
 
 
-@pytest.mark.asyncio
 async def test_ephemera_with_invalid_args():
     timeout = 0.1
 
@@ -31,7 +30,6 @@ async def test_ephemera_with_invalid_args():
             await asyncio.sleep(timeout + 0.1)
 
 
-@pytest.mark.asyncio
 async def test_ephemera_with_timeout():
     timeout = 0.1
     with pytest.raises(asyncio.TimeoutError):
@@ -39,7 +37,6 @@ async def test_ephemera_with_timeout():
             await asyncio.sleep(timeout + 0.1)
 
 
-@pytest.mark.asyncio
 async def test_ephemera_with_timeout_at():
 
     timeout_at = time.monotonic() + 0.1
@@ -48,7 +45,6 @@ async def test_ephemera_with_timeout_at():
             await asyncio.sleep(1)
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_timeout.asyncio.sleep", autospec=True)
 async def test_func(mock_asyncio_sleep, capsys):
     delay = 1
@@ -64,7 +60,6 @@ async def test_func(mock_asyncio_sleep, capsys):
     mock_asyncio_sleep.assert_awaited_once_with(delay)
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_timeout.asyncio.sleep", autospec=True)
 async def test_producer(mock_async_sleep):
 
@@ -78,7 +73,6 @@ async def test_producer(mock_async_sleep):
     mock_async_sleep.assert_awaited_with(0)
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_timeout.asyncio.sleep", autospec=True)
 async def test_consumer(mock_async_sleep, capsys):
 
@@ -99,7 +93,6 @@ async def test_consumer(mock_async_sleep, capsys):
     mock_async_sleep.assert_awaited()
 
 
-@pytest.mark.asyncio
 @patch("patterns.async_timeout.ephemera", autospec=True)
 @patch(
     "patterns.async_timeout.asyncio.wait",
