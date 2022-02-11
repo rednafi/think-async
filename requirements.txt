@@ -4,8 +4,6 @@
 #
 #    pip-compile --output-file=requirements.txt requirements.in
 #
---extra-index-url https://redowan.nafi:FCSxC-yTNqSWTdM5cwS6@git.dendisoftware.com/api/v4/groups/3/-/packages/pypi/simple
-
 aiobotocore==1.4.2
     # via -r requirements.in
 aiohttp==3.7.4.post0
@@ -80,7 +78,7 @@ sniffio==1.2.0
     #   anyio
     #   httpcore
     #   httpx
-twisted==21.7.0
+twisted==22.1.0
     # via -r requirements.in
 typing-extensions==3.10.0.2
     # via
@@ -95,7 +93,7 @@ wrapt==1.13.2
     # via aiobotocore
 yarl==1.7.0
     # via aiohttp
-zope.interface==5.4.0
+zope-interface==5.4.0
     # via twisted
 
 # The following packages are considered to be unsafe in a requirements file:
