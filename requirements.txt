@@ -78,7 +78,7 @@ sniffio==1.2.0
     #   anyio
     #   httpcore
     #   httpx
-twisted==22.1.0
+twisted==22.2.0
     # via -r requirements.in
 typing-extensions==3.10.0.2
     # via
