@@ -3,7 +3,7 @@
 ![async](https://user-images.githubusercontent.com/30027932/114286121-d4fef400-9a7d-11eb-9e1c-34904ac79aa3.png)
 
 
-🌿 Exploring Different Concurrency Paradigms in Python
+🌿 Exploring different concurrency paradigms in Python
 
 [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 [![License](https://img.shields.io/cocoapods/l/AFNetworking?style=flat-square)](https://github.com/rednafi/think-asyncio/blob/master/LICENSE)
