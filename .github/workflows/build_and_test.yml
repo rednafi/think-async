@@ -12,29 +12,50 @@ on:
       - master
 
 jobs:
-  build:
+  # If you trigger a new workflow while the previous one is running,
+# this will cancel the previous one.
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  run-tests:
     runs-on: ${{ matrix.os }}
     strategy:
+      # Use matrix strategy to run the tests on multiple Py versions on multiple OSs.
       matrix:
         os: [ubuntu-latest, macos-latest]
         python-version: ["3.8", "3.9", "3.10"]
+        include:
+        - os: ubuntu-latest
+          path: ~/.cache/pip
+        - os: macos-latest
+          path: ~/Library/Caches/pip
 
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install the dependencies
+      - uses: actions/cache@v3
+        with:
+          path: ${{ matrix.path }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-${{ hashFiles('**/requirements-dev.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install the Dependencies
         run: |
+          echo "Installing the dependencies..."
           make install-deps
 
-      - name: Check linter
+      - name: Check Linter
         run: |
+          echo "Checking linter formatting..."
           make lint-check
 
-      - name: Run the tests
+      - name: Run Tests
         run: |
+          echo "Running the tests..."
           make test
