@@ -84,7 +84,7 @@ class TestRedisQueue:
         "patterns.async_redis_queue.aioredis.from_url",
         new_callable=lambda: FakeRedis.from_url,
     )
-    def setup(self, mock_aioredis_from_url):
+    def setup(self, mock_aioredis_from_url, *args):
         # Mock instances.
         self.mock_aioredis_from_url = mock_aioredis_from_url
 
@@ -103,8 +103,10 @@ class TestRedisQueue:
 
     async def test_enqueue_invoke_pickle_error(self, caplog):
         # Queue.enqueue should raise pickle error if 'func' object aren't the same.
-        with pytest.raises(pickle.PickleError):
-            await self.redis_queue.enqueue(func=AsyncMock(), start=1, end=2)
+        with caplog.at_level(logging.INFO):
+            with pytest.raises(pickle.PickleError):
+                await self.redis_queue.enqueue(func=AsyncMock(), start=1, end=2)
+
 
     async def test_enqueue(self, caplog):
         with caplog.at_level(logging.INFO):
