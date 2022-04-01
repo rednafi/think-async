@@ -107,7 +107,6 @@ class TestRedisQueue:
             with pytest.raises(pickle.PickleError):
                 await self.redis_queue.enqueue(func=AsyncMock(), start=1, end=2)
 
-
     async def test_enqueue(self, caplog):
         with caplog.at_level(logging.INFO):
             # Call 'enqueue' with the real 'foo' function.
