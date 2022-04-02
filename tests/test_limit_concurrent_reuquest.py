@@ -15,8 +15,8 @@ async def test_make_request(mock_asyncio_sleep, mock_async_client_get):
 
     # Assert.
     assert status_code == 200
-    mock_asyncio_sleep.assert_awaited_once()
-    mock_async_client_get.assert_awaited_once()
+    mock_asyncio_sleep.assert_awaited()
+    mock_async_client_get.assert_awaited()
 
 
 @patch("patterns.limit_concurrent_request.make_request", autospec=True)
