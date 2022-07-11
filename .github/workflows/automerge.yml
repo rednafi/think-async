@@ -15,9 +15,9 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     if: >
-      {{ github.actor == 'dependabot[bot]' }}
-      && {{ github.event.pull_request }}
-      && {{ github.event.workflow_run.conclusion == 'success' }}
+      github.actor == 'dependabot[bot]'
+      && github.event.pull_request
+      && github.event.workflow_run.conclusion == 'success'
 
     steps:
       - name: Enable auto-merge for Dependabot PRs
