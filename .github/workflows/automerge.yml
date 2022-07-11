@@ -14,7 +14,7 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: >-
+    if: >
       {{ github.actor == 'dependabot[bot]' }}
       && {{ github.event.pull_request }}
       && {{ github.event.workflow_run.conclusion == 'success' }}
