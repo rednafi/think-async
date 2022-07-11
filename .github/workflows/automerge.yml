@@ -14,12 +14,14 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }} \
-    \ && {{ github.event.workflow_run.conclusion == 'success' }}
+    if: >-
+      ({{ github.actor == 'dependabot[bot]' }}
+      || {{ github.actor == 'rednafi'}})
+      && {{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
+          PR_URL: ${{ github.event.pull_request.html_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
