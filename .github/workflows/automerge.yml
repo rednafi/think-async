@@ -15,8 +15,8 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     if: >-
-      ({{ github.actor == 'dependabot[bot]' }}
-      || {{ github.actor == 'rednafi'}})
+      {{ github.actor == 'dependabot[bot]' }}
+      && {{ github.event.pull_request }}
       && {{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
