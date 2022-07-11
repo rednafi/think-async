@@ -1,4 +1,4 @@
-name: Build & test think-async
+name: Build & test
 
 on:
   schedule:
