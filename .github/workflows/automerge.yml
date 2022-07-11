@@ -1,11 +1,8 @@
+# .github/workflows/automerge.yml
+
 name: Dependabot auto-merge
 
-on:
-  pull_request:
-  workflow_run:
-    workflows: ["Build & test"]
-    types:
-      - completed
+on: pull_request
 
 permissions:
   contents: write
@@ -13,14 +10,12 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: >
-      github.actor == 'dependabot[bot]'
-      && github.event.pull_request.head.sha
-      && github.event.workflow_run.conclusion == 'success'
-
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - name: Enable auto-merge for Dependabot PRs
         run: gh pr merge --auto --merge "$PR_URL"
         env:
-          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_URL: ${{github.event.pull_request.html_url}}
+          # GitHub provides this variable in the CI env. You don't
+          # need to add anything to the secrets vault.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
