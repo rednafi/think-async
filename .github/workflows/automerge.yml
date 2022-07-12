@@ -2,13 +2,6 @@ name: Dependabot auto-merge
 
 on:
   pull_request:
-  workflow_dispatch:
-    inputs:
-      x_manual:
-        description: 'True to print to STDOUT'
-        required: true
-        type: boolean
-
   workflow_run:
     workflows: ["Build & test"]
     types:
@@ -21,8 +14,8 @@ jobs:
   dependabot:
     runs-on: ubuntu-latest
     if: >
-      ( inputs.x_manual || github.actor == 'dependabot[bot]' )
-      && github.event.pull_request
+      github.actor == 'dependabot[bot]'
+      && github.event.pull_request.head.sha
       && github.event.workflow_run.conclusion == 'success'
 
     steps:
