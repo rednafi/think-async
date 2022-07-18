@@ -61,7 +61,7 @@ pytest==7.1.2
     # via
     #   -r requirements-dev.in
     #   pytest-asyncio
-pytest-asyncio==0.18.3
+pytest-asyncio==0.19.0
     # via -r requirements-dev.in
 redis==4.3.4
     # via fakeredis
