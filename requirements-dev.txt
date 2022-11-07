@@ -18,8 +18,6 @@ click==8.1.3
     #   pip-tools
 deprecated==1.2.13
     # via redis
-exceptiongroup==1.0.0
-    # via pytest
 fakeredis==1.10.0
     # via -r requirements-dev.in
 flake8==4.0.1
@@ -30,7 +28,7 @@ isort==5.10.1
     # via -r requirements-dev.in
 mccabe==0.6.1
     # via flake8
-mypy==0.982
+mypy==0.990
     # via -r requirements-dev.in
 mypy-extensions==0.4.3
     # via
@@ -68,12 +66,7 @@ redis==4.3.4
 sortedcontainers==2.4.0
     # via fakeredis
 tomli==2.0.1
-    # via
-    #   black
-    #   build
-    #   mypy
-    #   pep517
-    #   pytest
+    # via pep517
 typing-extensions==4.3.0
     # via mypy
 wheel==0.37.1
