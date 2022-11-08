@@ -19,7 +19,7 @@ concurrency:
 jobs:
   run-tests:
     runs-on: ${{ matrix.os }}
-    container: python:${{ matrix.python-version }}-slim-bullseye
+    container: python:${{ matrix.python-version }}-bullseye
     strategy:
       # Use matrix strategy to run the tests on multiple Py versions on multiple OSs.
       matrix:
