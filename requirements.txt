@@ -29,7 +29,7 @@ automat==20.2.0
     # via twisted
 botocore==1.24.21
     # via aiobotocore
-certifi==2022.6.15
+certifi==2022.12.7
     # via
     #   httpcore
     #   httpx
