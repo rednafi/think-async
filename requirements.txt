@@ -20,7 +20,7 @@ async-timeout==4.0.2
     # via
     #   aiohttp
     #   aioredis
-attrs==21.4.0
+attrs==22.2.0
     # via
     #   aiohttp
     #   automat
