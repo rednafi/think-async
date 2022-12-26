@@ -69,7 +69,7 @@ tomli==2.0.1
     # via pep517
 typing-extensions==4.3.0
     # via mypy
-wheel==0.37.1
+wheel==0.38.1
     # via pip-tools
 wrapt==1.14.1
     # via deprecated
