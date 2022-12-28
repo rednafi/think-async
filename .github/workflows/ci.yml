@@ -46,7 +46,7 @@ jobs:
       - name: Install the Dependencies
         run: |
           echo "Installing the dependencies..."
-          make install-deps
+          pip install -r requirements.txt -r requirements-dev.txt
 
       - name: Check Linter
         run: |
