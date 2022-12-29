@@ -1,6 +1,5 @@
 black
-isort
-flake8
+ruff
 mypy
 pip-tools
 pytest

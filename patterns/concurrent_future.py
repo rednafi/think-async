@@ -52,7 +52,7 @@ def threads_with_executor_map():
     print("\nDoing it with thread map\n")
 
     with confu.ThreadPoolExecutor(MAX_CONCURRENCY) as executor:
-        results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
+        results = executor.map(foo, list(range(N_TASKS)))
 
         try:
             for result in results:
@@ -80,7 +80,7 @@ def processes_with_executor_submit():
 def processes_with_executor_map():
     print("\nDoing it with process map\n")
     with confu.ProcessPoolExecutor(MAX_CONCURRENCY) as executor:
-        results = executor.map(foo, [task_id for task_id in range(N_TASKS)])
+        results = executor.map(foo, list(range(N_TASKS)))
 
         try:
             for result in results:

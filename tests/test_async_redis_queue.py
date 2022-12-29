@@ -72,7 +72,7 @@ async def test_simple_task(capsys):
 
     # Assert.
     assert st.func == mock_func
-    assert st.args == tuple()
+    assert st.args == ()
     assert st.kwargs["num"] == num
     out, err = capsys.readouterr()
     assert err == ""

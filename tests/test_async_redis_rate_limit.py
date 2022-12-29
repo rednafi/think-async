@@ -46,7 +46,8 @@ async def test_func_to_be_rate_limited(mock_rate_limit, capsys):
     # Assert.
     out, err = capsys.readouterr()
     assert err == ""
-    assert "Func call 1" and "Func call 10" in out
+    assert "Func call 1" in out
+    assert "Func call 10" in out
     mock_rate_limit.assert_called()
 
 
@@ -68,5 +69,6 @@ async def test_orchestrator(mock_rate_limit, capsys):
     # Assert.
     out, err = capsys.readouterr()
     assert err == ""
-    assert "Func call 1" and "Func call 10" in out
+    assert "Func call 1" in out
+    assert "Func call 10" in out
     mock_rate_limit.assert_called()
