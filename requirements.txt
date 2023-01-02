@@ -71,7 +71,7 @@ python-dateutil==2.8.2
     # via botocore
 rfc3986[idna2008]==1.5.0
     # via httpx
-rich==12.6.0
+rich==13.0.0
     # via -r requirements.in
 six==1.16.0
     # via
