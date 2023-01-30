@@ -48,7 +48,7 @@ pytest-asyncio==0.20.3
     # via -r requirements-dev.in
 redis==4.4.0
     # via fakeredis
-ruff==0.0.223
+ruff==0.0.237
     # via -r requirements-dev.in
 sortedcontainers==2.4.0
     # via fakeredis
