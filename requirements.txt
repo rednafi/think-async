@@ -45,15 +45,15 @@ h11==0.12.0
     # via httpcore
 httpcore==0.15.0
     # via httpx
-httpx==0.23.3
+httpx==0.24.0
     # via -r requirements.in
 hyperlink==21.0.0
     # via twisted
 idna==3.3
     # via
     #   anyio
+    #   httpx
     #   hyperlink
-    #   rfc3986
     #   yarl
 incremental==21.3.0
     # via twisted
@@ -71,8 +71,6 @@ pygments==2.14.0
     # via rich
 python-dateutil==2.8.2
     # via botocore
-rfc3986[idna2008]==1.5.0
-    # via httpx
 rich==13.3.3
     # via -r requirements.in
 six==1.16.0
