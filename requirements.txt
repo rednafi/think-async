@@ -4,7 +4,7 @@
 #
 #    pip-compile --no-emit-options --output-file=requirements.txt requirements.in
 #
-aiobotocore==2.5.3
+aiobotocore==2.6.0
     # via -r requirements.in
 aiohttp==3.8.5
     # via aiobotocore
