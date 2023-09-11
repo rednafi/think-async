@@ -55,7 +55,7 @@ idna==3.3
     #   httpx
     #   hyperlink
     #   yarl
-incremental==21.3.0
+incremental==22.10.0
     # via twisted
 jmespath==1.0.1
     # via botocore
@@ -82,7 +82,7 @@ sniffio==1.2.0
     #   anyio
     #   httpcore
     #   httpx
-twisted==22.10.0
+twisted==23.8.0
     # via -r requirements.in
 typing-extensions==4.4.0
     # via
