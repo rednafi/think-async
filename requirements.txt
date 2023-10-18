@@ -88,7 +88,7 @@ typing-extensions==4.4.0
     # via
     #   aioredis
     #   twisted
-urllib3==1.26.17
+urllib3==1.26.18
     # via botocore
 uvloop==0.17.0
     # via -r requirements.in
