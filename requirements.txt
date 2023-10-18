@@ -90,7 +90,7 @@ typing-extensions==4.4.0
     #   twisted
 urllib3==1.26.18
     # via botocore
-uvloop==0.17.0
+uvloop==0.18.0
     # via -r requirements.in
 wrapt==1.14.1
     # via aiobotocore
